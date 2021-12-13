@@ -11,6 +11,8 @@ import { RockComponent } from './forum/rock/rock.component';
 import { EdmComponent } from './forum/edm/edm.component';
 import { RapComponent } from './forum/rap/rap.component';
 import { JazzComponent } from './forum/jazz/jazz.component';
+import { FooterComponent } from './footer/footer.component';
+import { MiscComponent } from './forum/misc/misc.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { JazzComponent } from './forum/jazz/jazz.component';
     EdmComponent,
     RapComponent,
     JazzComponent,
+    FooterComponent,
+    MiscComponent,
   ],
   imports: [
     BrowserModule,

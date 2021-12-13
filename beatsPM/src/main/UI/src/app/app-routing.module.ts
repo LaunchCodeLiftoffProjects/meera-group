@@ -2,7 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CreatepostComponent } from './createpost/createpost.component'
-import { ForumComponent } from './forum/forum.component';
+import { EdmComponent } from './forum/edm/edm.component';
+import { JazzComponent } from './forum/jazz/jazz.component';
+import { RockComponent } from './forum/rock/rock.component';
+import { RapComponent } from './forum/rap/rap.component';
+import { MiscComponent } from './forum/misc/misc.component';
  
 const routes: Routes = [
 
@@ -19,17 +23,34 @@ const routes: Routes = [
   },
 
   {
-    path: 'forum',
+    path: 'forum/edm',
     pathMatch: 'full',
-    component: ForumComponent
+    component: EdmComponent
   },
 
   {
-    path: 'forum/edm',
+    path: 'forum/jazz',
     pathMatch: 'full',
-    component: ForumComponent
-  }
+    component: JazzComponent
+  },
 
+  {
+    path: 'forum/rock',
+    pathMatch: 'full',
+    component: RockComponent
+  },
+
+  {
+    path: 'forum/rap',
+    pathMatch: 'full',
+    component: RapComponent
+  },
+
+  {
+    path: 'forum/misc',
+    pathMatch: 'full',
+    component: MiscComponent
+  }
 
 ];
 
