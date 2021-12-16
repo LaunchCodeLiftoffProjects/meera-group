@@ -18,6 +18,14 @@
           <li class="nav-item">
             <a class="nav-link" href="forum">Music Forum</a>
           </li>
+          <li>
+          <form [formGroup]="createSearch" (ngSubmit)="onSubmit()">
+            <label>
+              <input type="text" placeholder="search posts" formControlName="searchText">
+              <button class="button" type="submit">Submit</button>
+            </label>
+          </form>
+          </li>
         </ul>
       </div>
     </div>
