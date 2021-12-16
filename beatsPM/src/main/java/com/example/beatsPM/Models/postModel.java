@@ -1,33 +1,35 @@
+package com.example.beatsPM.Models;
+
 public class postModel {
-    private string genre;
-    private string postTitle;
-    private string postBody;
+    private String genre;
+    private String postTitle;
+    private String postBody;
 
     public postModel() {
 
     }
 
-    public string getGenre() {
+    public String getGenre() {
         return genre;
     }
 
-    public void setGenre(string genre) {
+    public void setGenre(String genre) {
         this.genre = genre;
     }
 
-    public string getPostTitle() {
+    public String getPostTitle() {
         return postTitle;
     }
 
-    public void setPostTitle(string postTitle) {
+    public void setPostTitle(String postTitle) {
         this.postTitle = postTitle;
     }
 
-    public string getPostBody() {
+    public String getPostBody() {
         return postBody;
     }
 
-    public void setPostBody(string postBody) {
+    public void setPostBody(String postBody) {
         this.postBody = postBody;
     }
 }
