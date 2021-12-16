@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { postCreationObject } from './postCreationObject';
 
 @Component({
   selector: 'app-createpost',
@@ -8,16 +9,11 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 })
 export class CreatepostComponent implements OnInit {
   
-  postCreation = {
-    postBody: '',
-    postTitle: '',
-    genre: ''
-  }
 
   createPostForm = new FormGroup({
     postBody: new FormControl(''),
     postTitle: new FormControl(''),
-    genres: new FormControl(),
+    genre: new FormControl(),
   });
 
   constructor(
@@ -27,22 +23,24 @@ export class CreatepostComponent implements OnInit {
 
   ngOnInit(): void {
     this.initializeForm();
-  }
+  };
 
   initializeForm(): void {
     this.createPostForm = this.fb.group({
       postTitle: '',
       postBody: '',
-      genres: '',
+      genre: '',
       });
-    }
+    };
 
     get f() {
       return this.createPostForm.controls;
-    }
+    };
 
   onSubmit(): void {
     console.log(this.createPostForm);
-    
-  }
+
+    let postCreation = JSON.stringify(this.createPostForm.value);
+    alert(postCreation);
+  };
 }
