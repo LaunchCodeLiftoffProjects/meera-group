@@ -1,4 +1,4 @@
-package com.example.beatsPM.controllers;
+package com.example.beatsPM.Controllers;
 
 import com.example.beatsPM.Models.Data.postRepository;
 import org.springframework.beans.factory.annotation.Autowired;
