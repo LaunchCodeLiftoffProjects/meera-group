@@ -1,7 +1,8 @@
-export class postCreationObject {
-    constructor(
-        public genre: any,
-        public postTitle: any,
-        public postBody: any
-    ) {}
+
+export interface postCreationObject {
+    postId: number,
+    userId: number,
+    genre: string,
+    postTitle: string,
+    postBody: string
   }
