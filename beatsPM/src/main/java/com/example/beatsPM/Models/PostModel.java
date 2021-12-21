@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class postModel {
+public class PostModel {
     @NotNull
     private String genre;
     @NotNull
@@ -17,7 +17,7 @@ public class postModel {
     @Id
     private int postId;
 
-    public postModel() {
+    public PostModel () {
 
     }
 
