@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { postCreationObject } from './postCreationObject';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 
 @Component({
@@ -12,10 +13,8 @@ import { Observable } from 'rxjs';
 })
 export class CreatepostComponent implements OnInit {
   
-  private BASE_URL = 'localhost:8080'
+  private BASE_URL = 'https://2c3f7be5-0772-4bb5-9cf1-02c0188aaa6a.mock.pstmn.io'
   
-  posts: Observable<any> | any;
-  newPost: Observable<any> | any;
 
   createPostForm = new FormGroup({
     postBody: new FormControl(''),
@@ -31,15 +30,18 @@ export class CreatepostComponent implements OnInit {
 
   addPost() {
     const data: postCreationObject = {
-      userId: 0,
-      postId: 0,
       genre: this.createPostForm.controls['genre'].value,
       postTitle: this.createPostForm.controls['postTitle'].value,
       postBody: this.createPostForm.controls['postBody'].value,
-    } 
-    console.log(data);
-    this.newPost = this.http.post(this.BASE_URL = '/posts', data)
-  }
+      postId: 0,
+      userId: 0
+    };
+    this.http.post<postCreationObject>(this.BASE_URL, data).pipe(
+      catchError((err) => {
+        console.error(err);
+        throw err;
+      }))
+    }
 
   ngOnInit(): void {
     this.initializeForm();
@@ -60,6 +62,13 @@ export class CreatepostComponent implements OnInit {
 
   onSubmit(): void {
     console.log(this.createPostForm);
-    this.addPost();
+    const data: postCreationObject = {
+      genre: this.createPostForm.controls['genre'].value,
+      postTitle: this.createPostForm.controls['postTitle'].value,
+      postBody: this.createPostForm.controls['postBody'].value,
+      postId: 0,
+      userId: 0
+    };
+    this.http.post<any>(this.BASE_URL, data);
   };
 }

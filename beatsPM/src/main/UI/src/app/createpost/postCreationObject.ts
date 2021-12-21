@@ -1,4 +1,3 @@
-
 export interface postCreationObject {
     postId: number,
     userId: number,
