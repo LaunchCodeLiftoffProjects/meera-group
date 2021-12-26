@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f99737d-8db1-4e29-897c-503ec7f27e8e" name="Changes" comment="fixed the ridiculous gradle issue">
+    <list default="true" id="2f99737d-8db1-4e29-897c-503ec7f27e8e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/meera-group.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/meera-group.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -14,14 +20,14 @@
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/build/classes/java/main/com/example/beatsPM/BeatsPmApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/build/classes/java/main/com/example/beatsPM/BeatsPmApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/build/classes/java/main/com/example/beatsPM/Models/Data/postRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/build/classes/java/main/com/example/beatsPM/Models/Data/postRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/build/classes/java/main/com/example/beatsPM/Models/postModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/build/classes/java/main/com/example/beatsPM/Models/postModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/build/classes/java/main/com/example/beatsPM/controllers/postController.class" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/build/classes/java/main/com/example/beatsPM/controllers/postController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/postController.java" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Models/Data/postRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Models/Data/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Models/postModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Models/PostModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/BeatsPmApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/BeatsPmApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/PostController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,19 +42,34 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/beatsPM">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="beatsPM" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="post-backend" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,7 +91,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/beatsPM/src" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
