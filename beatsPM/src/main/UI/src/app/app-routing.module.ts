@@ -7,6 +7,7 @@ import { JazzComponent } from './forum/jazz/jazz.component';
 import { RockComponent } from './forum/rock/rock.component';
 import { RapComponent } from './forum/rap/rap.component';
 import { MiscComponent } from './forum/misc/misc.component';
+import { ForumComponent } from './forum/forum.component';
  
 const routes: Routes = [
 
@@ -23,34 +24,10 @@ const routes: Routes = [
   },
 
   {
-    path: 'forum/edm',
+    path: 'forum',
     pathMatch: 'full',
-    component: EdmComponent
+    component: ForumComponent,
   },
-
-  {
-    path: 'forum/jazz',
-    pathMatch: 'full',
-    component: JazzComponent
-  },
-
-  {
-    path: 'forum/rock',
-    pathMatch: 'full',
-    component: RockComponent
-  },
-
-  {
-    path: 'forum/rap',
-    pathMatch: 'full',
-    component: RapComponent
-  },
-
-  {
-    path: 'forum/misc',
-    pathMatch: 'full',
-    component: MiscComponent
-  }
 
 ];
 
