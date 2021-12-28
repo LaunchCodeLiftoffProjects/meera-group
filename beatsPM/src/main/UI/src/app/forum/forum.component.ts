@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PostObject } from '../createpost/PostObject';
+import { ApiService } from '../shared/api.service';
 
 @Component({
   selector: 'app-forum',
@@ -7,12 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForumComponent implements OnInit {
 
-  constructor() { }
+  posts: Array<PostObject> = [];
+
+  constructor(private apiService: ApiService) {
+    this.apiService.getAllPosts().subscribe(post => {
+      this.posts = post;
+    });
+  }
 
   ngOnInit(): void {
   }
   
-  genreid: number = 0;
   
 
 

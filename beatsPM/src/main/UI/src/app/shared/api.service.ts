@@ -9,7 +9,11 @@ export class ApiService {
     constructor(private http: HttpClient){}
 
     createPost(postObj: PostObject): Observable<any> {
-        return this.http.post('http://localhost:8080/add/', postObj);
+        return this.http.post('http://localhost:8080/add', postObj);
+      }
+
+    getAllPosts(): Observable<Array<PostObject>> {
+        return this.http.get<Array<PostObject>>('http://localhost:8080/allposts');
       }
       
 }

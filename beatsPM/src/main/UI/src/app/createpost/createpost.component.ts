@@ -31,6 +31,7 @@ export class CreatepostComponent implements OnInit {
       postTitle: '',
       postBody: '',
       genre: '',
+      postId: 0,
     }
     };
 
