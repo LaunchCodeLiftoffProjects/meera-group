@@ -13,6 +13,7 @@ public class PostModel {
     private String postTitle;
     @NotNull
     private String postBody;
+
     @GeneratedValue
     @Id
     private int postId;

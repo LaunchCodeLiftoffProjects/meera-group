@@ -1,6 +1,9 @@
-<ul *ngFor="let posts of posts">
-  <li class="h3">{{ posts.postTitle }}</li>
-  <p>{{ posts.postBody }}</p>
-  <p>{{ posts.genre }} <p>
-  <p>------------------</p>
-</ul>
+<form *ngFor="let posts of posts" (ngSubmit)="ngDeletePost(posts.postId)">
+  <ul>
+    <li class="h3"> {{ posts.postTitle }} </li>
+    <p>{{ posts.postBody }}</p>
+    <p>{{ posts.genre }} </p>
+    <button class="button" type="submit">Delete Post</button>
+    <p>------------------</p>
+  </ul>
+</form>
