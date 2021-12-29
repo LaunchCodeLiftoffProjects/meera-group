@@ -1,1 +1,6 @@
-<p>forum works!</p>
+<ul *ngFor="let posts of posts">
+  <li class="h3">{{ posts.postTitle }}</li>
+  <p>{{ posts.postBody }}</p>
+  <p>{{ posts.genre }} <p>
+  <p>------------------</p>
+</ul>
