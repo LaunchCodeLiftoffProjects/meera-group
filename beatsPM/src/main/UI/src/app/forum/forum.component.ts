@@ -12,15 +12,25 @@ export class ForumComponent implements OnInit {
   posts: Array<PostObject> = [];
 
   constructor(private apiService: ApiService) {
-    this.apiService.getAllPosts().subscribe(post => {
-      this.posts = post;
+  this.apiService.getAllPosts().subscribe(post => {
+          this.posts = post;
     });
+
   }
 
   ngOnInit(): void {
+
   }
-  
-  
+
+  reloadCurrentPage() {
+      window.location.reload();
+     }
+
+  ngDeletePost(postId: number) {
+  console.log("please work")
+  this.apiService.deletePost(postId);
+  this.reloadCurrentPage();
+  }
 
 
 }

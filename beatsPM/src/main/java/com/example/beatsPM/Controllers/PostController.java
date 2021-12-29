@@ -31,5 +31,13 @@ public class PostController {
         public @ResponseBody Iterable<PostModel> getAllPosts() {
                 return postRepository.findAll();
         }
+
+        @CrossOrigin(origins = "*")
+        @DeleteMapping(value = "/forum/{id}")
+        public ResponseEntity<Long> deleteEmployee(@PathVariable int id) {
+                postRepository.deleteById(id);
+                return new ResponseEntity<Long>(HttpStatus.OK);
+                }
         }
+
 
