@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PostObject } from '../createpost/PostObject';
- 
+
 @Injectable({providedIn:'root'})
 export class ApiService {
 
@@ -13,7 +13,7 @@ export class ApiService {
       }
 
     getAllPosts(): Observable<Array<PostObject>> {
-        return this.http.get<Array<PostObject>>('http://localhost:8080/allposts');
+        return this.http.get<Array<PostObject>>('http://localhost:8080/forum');
       }
-      
+
 }
