@@ -8,9 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
+import javax.validation.Valid;
+
 
 @CrossOrigin(origins = "*")
 @Controller
@@ -18,6 +17,23 @@ public class PostController {
 
         @Autowired
         private PostRepository postRepository;
+
+
+        @CrossOrigin(origins = "http://localhost:4200/edit")
+        @PutMapping ("/edit/{id}")
+        public ResponseEntity<PostModel> editPost(@Valid @RequestBody PostModel newPost, @PathVariable int id) {
+                System.out.println(id);
+                PostModel post = postRepository.findById(id).orElseThrow();
+
+                System.out.println(post.getGenre());
+                                post.setPostBody(newPost.getPostBody());
+                                post.setPostTitle(newPost.getPostTitle());
+                                post.setGenre(newPost.getGenre());
+                                final PostModel updatedPost = postRepository.save(post);
+                                return ResponseEntity.ok(updatedPost);
+        }
+
+
 
         @CrossOrigin(origins = "http://localhost:4200/add")
         @PostMapping("/add")
@@ -34,10 +50,14 @@ public class PostController {
 
         @CrossOrigin(origins = "*")
         @DeleteMapping(value = "/forum/{id}")
-        public ResponseEntity<Long> deleteEmployee(@PathVariable int id) {
+        public ResponseEntity<Long> deletePost(@PathVariable int id) {
                 postRepository.deleteById(id);
                 return new ResponseEntity<Long>(HttpStatus.OK);
-                }
         }
+
+
+
+
+}
 
 
