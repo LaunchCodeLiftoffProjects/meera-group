@@ -25,10 +25,19 @@ export class ApiService {
      }
 
 
-    editPost(Id: number):void{
-      console.log("Edit " + Id +" Button Pressed")
+    editPost(postObj: PostObject, Id: number):Observable<any>{
 
+      return this.http.put('http://localhost:8080/edit/'+ Id, postObj);
 
     }
+
+
+
+//     editPost(postObj: PostObject): Observable<any> {
+//         return this.http.post('http://localhost:8080/edit', postObj);
+//       }
+
+
+
 
 }
