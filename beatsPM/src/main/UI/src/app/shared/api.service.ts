@@ -24,4 +24,11 @@ export class ApiService {
         console.log('it was maybe deleted?')
      }
 
+
+    editPost(Id: number):void{
+      console.log("Edit " + Id +" Button Pressed")
+
+
+    }
+
 }

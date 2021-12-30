@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostObject } from '../createpost/PostObject';
 import { ApiService } from '../shared/api.service';
+import { Observable, throwError, } from 'rxjs';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-forum',
@@ -11,9 +13,11 @@ export class ForumComponent implements OnInit {
 
   posts: Array<PostObject> = [];
 
-  constructor(private apiService: ApiService) {
+
+  constructor(private apiService: ApiService, private router: Router,) {
   this.apiService.getAllPosts().subscribe(post => {
           this.posts = post;
+
     });
 
   }
@@ -30,6 +34,12 @@ export class ForumComponent implements OnInit {
   console.log("please work")
   this.apiService.deletePost(postId);
   this.reloadCurrentPage();
+  }
+
+  editPost(postId: number){
+
+        this.router.navigateByUrl('/editpost/'+ postId);
+  console.log(postId)
   }
 
 

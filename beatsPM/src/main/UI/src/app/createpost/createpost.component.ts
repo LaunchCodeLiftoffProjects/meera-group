@@ -14,9 +14,9 @@ import { PostObject } from './PostObject';
   styleUrls: ['./createpost.component.css']
 })
 export class CreatepostComponent implements OnInit {
-  
-  private BASE_URL = 'https://2c3f7be5-0772-4bb5-9cf1-02c0188aaa6a.mock.pstmn.io'
-  
+
+//   private BASE_URL = 'https://2c3f7be5-0772-4bb5-9cf1-02c0188aaa6a.mock.pstmn.io'
+
   postObject: PostObject;
   createPostForm!: FormGroup;
 
@@ -51,7 +51,7 @@ export class CreatepostComponent implements OnInit {
     this.postObject.genre = this.createPostForm.controls['genre'].value;
 
     this.api.createPost(this.postObject).subscribe((data) => {
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/forum');
     }, error => {
       throwError(error);
     })
@@ -68,7 +68,7 @@ export class CreatepostComponent implements OnInit {
     get f() {
       return this.createPostForm.controls;
     };
-   
+
 
   onSubmit(): void {
   };
