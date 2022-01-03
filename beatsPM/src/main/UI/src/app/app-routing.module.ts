@@ -11,13 +11,11 @@ import { MiscComponent } from './forum/misc/misc.component';
 import { ForumComponent } from './forum/forum.component';
 
 const routes: Routes = [
-
   {
-    path: 'home',
-    pathMatch: 'full',
-    component: HomeComponent
-  },
-
+      path: '',
+      pathMatch: 'full',
+      component: HomeComponent
+    },
   {
     path: 'createpost',
     pathMatch: 'full',

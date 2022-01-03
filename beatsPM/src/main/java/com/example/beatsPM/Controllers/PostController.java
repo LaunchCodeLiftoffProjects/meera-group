@@ -53,10 +53,7 @@ public class PostController {
         public ResponseEntity<Long> deletePost(@PathVariable int id) {
                 postRepository.deleteById(id);
                 return new ResponseEntity<Long>(HttpStatus.OK);
-        }
-
-
-
+        };
 
 }
 
