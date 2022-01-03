@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f99737d-8db1-4e29-897c-503ec7f27e8e" name="Changes" comment="updated footer with bootstrap content and stuck to bottom of page for all pages" />
+    <list default="true" id="2f99737d-8db1-4e29-897c-503ec7f27e8e" name="Changes" comment="updated footer with bootstrap content and stuck to bottom of page for all pages">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/PostController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -167,7 +173,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640828457087</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updated footer with bootstrap content and stuck to bottom of page for all pages">
+      <created>1640905451627</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1640905451627</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated footer with bootstrap content and stuck to bottom of page for all pages">
+      <created>1640905457706</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1640905457706</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
