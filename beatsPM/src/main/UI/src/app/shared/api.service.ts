@@ -31,6 +31,10 @@ export class ApiService {
 
     }
 
+    searchAllPosts(searchTerm: string): Observable<any> {
+            return this.http.post('http://localhost:8080/results', searchTerm);
+          }
+
 
 
 //     editPost(postObj: PostObject): Observable<any> {
