@@ -32,7 +32,7 @@ export class ApiService {
     }
 
     searchAllPosts(searchTerm: string): Observable<any> {
-            return this.http.post('http://localhost:8080/results', searchTerm);
+            return this.http.put('http://localhost:8080/results', searchTerm);
           }
 
 
