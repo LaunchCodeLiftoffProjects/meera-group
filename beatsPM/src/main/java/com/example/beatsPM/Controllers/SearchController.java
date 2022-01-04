@@ -20,7 +20,7 @@ public class SearchController {
     private PostRepository postRepository;
 
 
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "http://localhost:4200/forum")
     @PostMapping("/results")
     public @ResponseBody
     Iterable<PostModel> displaySearchResults( @RequestParam String searchTerm) {
@@ -28,7 +28,7 @@ public class SearchController {
         if (searchTerm.toLowerCase().equals("all") || searchTerm.equals("")){
             posts = postRepository.findAll();
         } else {
-            posts = PostData.findByValue( searchTerm, postRepository.findAll());
+            posts = PostData.findByValue(searchTerm, postRepository.findAll());
         }
     return posts;
     }
