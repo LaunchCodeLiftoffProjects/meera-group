@@ -30,9 +30,6 @@ public class SearchController {
         } else {
             posts = PostData.findByValue( searchTerm, postRepository.findAll());
         }
-
-
     return posts;
-
     }
 }
