@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 
 
 @CrossOrigin(origins = "*")
@@ -54,6 +55,8 @@ public class PostController {
                 postRepository.deleteById(id);
                 return new ResponseEntity<Long>(HttpStatus.OK);
         };
+
+
 
 }
 

@@ -1,5 +1,6 @@
 package com.example.beatsPM.Models.Data;
 
+import com.example.beatsPM.Models.PostData;
 import com.example.beatsPM.Models.PostModel;
 import org.springframework.data.repository.CrudRepository;
 //import beatsPM/src/main/java/com/example/beatsPM/Models/postModel.java;
