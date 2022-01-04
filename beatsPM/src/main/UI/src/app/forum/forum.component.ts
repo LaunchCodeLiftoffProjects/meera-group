@@ -43,9 +43,9 @@ export class ForumComponent implements OnInit {
   }
 
   searchPosts(searchTerm:string){
-  this.apiService.searchAllPosts(searchTerm).subscribe(post => {
+          this.apiService.searchAllPosts(searchTerm).subscribe(post => {
           this.posts = post;
-   this.reloadCurrentPage();
+          this.reloadCurrentPage();
     });
   }
 

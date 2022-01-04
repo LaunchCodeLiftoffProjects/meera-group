@@ -32,6 +32,32 @@ const routes: Routes = [
     pathMatch: 'prefix',
     component: EditpostComponent
   },
+  {
+      path: 'forum/edm',
+      pathMatch: 'prefix',
+      component: EdmComponent
+    },
+  {
+      path: 'forum/rock',
+      pathMatch: 'prefix',
+      component: RockComponent
+    },
+  {
+      path: 'forum/jazz',
+      pathMatch: 'prefix',
+      component: JazzComponent
+    },
+  {
+      path: 'forum/rap',
+      pathMatch: 'prefix',
+      component: RapComponent
+    },
+  {
+      path: 'forum/misc',
+      pathMatch: 'prefix',
+      component: MiscComponent
+    },
+
 
 ];
 

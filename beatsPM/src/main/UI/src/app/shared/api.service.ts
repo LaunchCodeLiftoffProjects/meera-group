@@ -26,13 +26,12 @@ export class ApiService {
 
 
     editPost(postObj: PostObject, Id: number):Observable<any>{
-
       return this.http.put('http://localhost:8080/edit/'+ Id, postObj);
-
     }
 
     searchAllPosts(searchTerm: string): Observable<any> {
-            return this.http.put('http://localhost:8080/results', searchTerm);
+            console.log(searchTerm);
+            return this.http.post('http://localhost:8080/results', JSON.stringify(searchTerm));
           }
 
 
