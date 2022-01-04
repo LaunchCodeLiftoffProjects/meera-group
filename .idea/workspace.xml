@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f99737d-8db1-4e29-897c-503ec7f27e8e" name="Changes" comment="updated routing module in angular to make homecomponent run with no extra path on url">
-      <change afterPath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/SearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Models/PostData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
@@ -16,9 +14,11 @@
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Models/Data/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Models/Data/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/forum/forum.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/forum/forum.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/shared/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/shared/api.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

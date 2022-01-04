@@ -39,7 +39,14 @@ export class ForumComponent implements OnInit {
   editPost(postId: number){
 
         this.router.navigateByUrl('/editpost/'+ postId);
-  console.log(postId)
+        console.log(postId)
+  }
+
+  searchPosts(searchTerm:string){
+  this.apiService.searchAllPosts(searchTerm).subscribe(post => {
+          this.posts = post;
+   this.reloadCurrentPage();
+    });
   }
 
 
