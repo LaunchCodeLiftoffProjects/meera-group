@@ -9,14 +9,17 @@ export class ApiService {
 
     constructor(private http: HttpClient){}
 
+    //http post method used for adding a post to backend
     createPost(postObj: PostObject): Observable<any> {
         return this.http.post('http://localhost:8080/add', postObj);
       }
 
+    //http get method for receiving all the posts to populate the forum
     getAllPosts(): Observable<Array<PostObject>> {
         return this.http.get<Array<PostObject>>('http://localhost:8080/forum');
       }
 
+    //http delete method to delete a post sent to backend
      deletePost(Id: number): void{
         console.log("this is the apiservice checker");
         console.log(Id);
@@ -24,23 +27,14 @@ export class ApiService {
         console.log('it was maybe deleted?')
      }
 
-
+    //http put method to edit post data using the postID
     editPost(postObj: PostObject, Id: number):Observable<any>{
       return this.http.put('http://localhost:8080/edit/'+ Id, postObj);
     }
 
+    // WIP search http method
     searchAllPosts(searchTerm: string): Observable<any> {
             console.log(searchTerm);
             return this.http.post('http://localhost:8080/results', JSON.stringify(searchTerm));
           }
-
-
-
-//     editPost(postObj: PostObject): Observable<any> {
-//         return this.http.post('http://localhost:8080/edit', postObj);
-//       }
-
-
-
-
 }
