@@ -20,7 +20,7 @@ public class SearchController {
     private PostRepository postRepository;
 
 
-    @CrossOrigin(origins = "http://localhost:4200/forum")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/results")
     public @ResponseBody
     Iterable<PostModel> displaySearchResults( @RequestParam String searchTerm) {

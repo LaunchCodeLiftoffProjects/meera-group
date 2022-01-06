@@ -31,13 +31,12 @@ export class ForumComponent implements OnInit {
      }
 
   ngDeletePost(postId: number) {
-  console.log("please work")
-  this.apiService.deletePost(postId);
-  this.reloadCurrentPage();
+      console.log("please work")
+      this.apiService.deletePost(postId);
+      this.reloadCurrentPage();
   }
 
   editPost(postId: number){
-
         this.router.navigateByUrl('/editpost/'+ postId);
         console.log(postId)
   }

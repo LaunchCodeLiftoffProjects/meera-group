@@ -44,7 +44,7 @@ export class CreatepostComponent implements OnInit {
       genre: new FormControl('',  Validators.required),
     });
   };
-
+  //function to create the post using form values in localhost:4200/createpost
   createPost() {
     this.postObject.postTitle = this.createPostForm.controls['postTitle'].value;
     this.postObject.postBody = this.createPostForm.controls['postBody'].value;

@@ -64,7 +64,7 @@ constructor(
       });
     });
   };
-
+    //function used to edit the post by grabbing post data and editing the post using postid
     editPost() {
       this.postObject.postTitle = this.editPostForm.controls['postTitle'].value;
       this.postObject.postBody = this.editPostForm.controls['postBody'].value;

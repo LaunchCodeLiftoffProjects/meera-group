@@ -31,12 +31,6 @@ export class EdmComponent implements OnInit {
 
   }
 
-//   filterGenre(post: PostObject): void {
-//       console.log(posts);
-//        if (post.genre == "ROCK") {
-//           this.postsGenre.push(post);
-//        }
-//     }
 
   reloadCurrentPage() {
       window.location.reload();

@@ -19,7 +19,7 @@ public class PostController {
         @Autowired
         private PostRepository postRepository;
 
-
+        // controller used to edit posts using http methods into the controller
         @CrossOrigin(origins = "http://localhost:4200/edit")
         @PutMapping ("/edit/{id}")
         public ResponseEntity<PostModel> editPost(@Valid @RequestBody PostModel newPost, @PathVariable int id) {
@@ -35,7 +35,7 @@ public class PostController {
         }
 
 
-
+        // controller used to add a post into the forum
         @CrossOrigin(origins = "http://localhost:4200/add")
         @PostMapping("/add")
         public ResponseEntity<Void> createPost(@RequestBody PostModel postModel) {
@@ -43,12 +43,14 @@ public class PostController {
                 return new ResponseEntity<>(HttpStatus.CREATED);
                 }
 
+        //controller used to get all the posts to build forum on front end
         @CrossOrigin(origins = "http://localhost:4200/forum")
         @GetMapping("/forum")
         public @ResponseBody Iterable<PostModel> getAllPosts() {
                 return postRepository.findAll();
         }
 
+        //controller used to delete a post from the database
         @CrossOrigin(origins = "*")
         @DeleteMapping(value = "/forum/{id}")
         public ResponseEntity<Long> deletePost(@PathVariable int id) {
