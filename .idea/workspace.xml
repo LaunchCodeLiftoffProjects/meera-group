@@ -4,29 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f99737d-8db1-4e29-897c-503ec7f27e8e" name="Changes" comment="searchPosts in forum.component.ts">
+    <list default="true" id="2f99737d-8db1-4e29-897c-503ec7f27e8e" name="Changes" comment="cleaned angular typescript files of deadcode, added comments to backend code and angular code">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/executionHistory/executionHistory.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/7.3.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/beatsPM/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/createpost/createpost.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/createpost/createpost.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/editpost/editpost.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/editpost/editpost.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/forum/edm/edm.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/forum/edm/edm.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/forum/forum.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/forum/forum.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/forum/jazz/jazz.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/forum/jazz/jazz.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/forum/misc/misc.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/forum/misc/misc.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/shared/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/shared/api.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/src/main/java/com/example/beatsPM/Controllers/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beatsPM/build/classes/java/main/com/example/beatsPM/controllers/postController.class" beforeDir="false" afterPath="$PROJECT_DIR$/beatsPM/build/classes/java/main/com/example/beatsPM/controllers/postController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +59,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="APICONNECTION" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -227,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641259080834</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="cleaned angular typescript files of deadcode, added comments to backend code and angular code">
+      <created>1641512955684</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1641512955684</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,6 +261,7 @@
     <MESSAGE value="updated footer with bootstrap content and stuck to bottom of page for all pages" />
     <MESSAGE value="updated routing module in angular to make homecomponent run with no extra path on url" />
     <MESSAGE value="searchPosts in forum.component.ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="searchPosts in forum.component.ts" />
+    <MESSAGE value="cleaned angular typescript files of deadcode, added comments to backend code and angular code" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned angular typescript files of deadcode, added comments to backend code and angular code" />
   </component>
 </project>
