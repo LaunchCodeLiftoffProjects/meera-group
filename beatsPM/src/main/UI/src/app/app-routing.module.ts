@@ -2,20 +2,20 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CreatepostComponent } from './createpost/createpost.component'
+import { EditpostComponent } from './editpost/editpost.component'
 import { EdmComponent } from './forum/edm/edm.component';
 import { JazzComponent } from './forum/jazz/jazz.component';
 import { RockComponent } from './forum/rock/rock.component';
 import { RapComponent } from './forum/rap/rap.component';
 import { MiscComponent } from './forum/misc/misc.component';
- 
+import { ForumComponent } from './forum/forum.component';
+
 const routes: Routes = [
-
   {
-    path: 'home',
-    pathMatch: 'full',
-    component: HomeComponent
-  },
-
+      path: '',
+      pathMatch: 'full',
+      component: HomeComponent
+    },
   {
     path: 'createpost',
     pathMatch: 'full',
@@ -23,34 +23,41 @@ const routes: Routes = [
   },
 
   {
-    path: 'forum/edm',
+    path: 'forum',
     pathMatch: 'full',
-    component: EdmComponent
+    component: ForumComponent,
   },
-
   {
-    path: 'forum/jazz',
-    pathMatch: 'full',
-    component: JazzComponent
+    path: 'editpost/:id',
+    pathMatch: 'prefix',
+    component: EditpostComponent
   },
-
   {
-    path: 'forum/rock',
-    pathMatch: 'full',
-    component: RockComponent
-  },
-
+      path: 'forum/edm',
+      pathMatch: 'prefix',
+      component: EdmComponent
+    },
   {
-    path: 'forum/rap',
-    pathMatch: 'full',
-    component: RapComponent
-  },
-
+      path: 'forum/rock',
+      pathMatch: 'prefix',
+      component: RockComponent
+    },
   {
-    path: 'forum/misc',
-    pathMatch: 'full',
-    component: MiscComponent
-  }
+      path: 'forum/jazz',
+      pathMatch: 'prefix',
+      component: JazzComponent
+    },
+  {
+      path: 'forum/rap',
+      pathMatch: 'prefix',
+      component: RapComponent
+    },
+  {
+      path: 'forum/misc',
+      pathMatch: 'prefix',
+      component: MiscComponent
+    },
+
 
 ];
 

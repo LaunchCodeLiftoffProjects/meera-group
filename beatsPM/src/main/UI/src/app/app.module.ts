@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MiscComponent } from './forum/misc/misc.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EditpostComponent } from './editpost/editpost.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     JazzComponent,
     FooterComponent,
     MiscComponent,
+    EditpostComponent,
   ],
   imports: [
     BrowserModule,

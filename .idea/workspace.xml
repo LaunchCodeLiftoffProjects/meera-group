@@ -4,19 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f99737d-8db1-4e29-897c-503ec7f27e8e" name="Changes" comment="" />
+    <list default="true" id="2f99737d-8db1-4e29-897c-503ec7f27e8e" name="Changes" comment="maybe if I commit it will let me merge" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/beatsPM">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/beatsPM">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="beatsPM" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Thymeleaf" />
+        <option value="Class" />
+        <option value="package-info" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="post-backend" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -26,21 +61,73 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectId" id="22FbqJQwMoY6nx1z9ovmBzHHdFZ" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/beatsPM/src" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.beatsPM.Controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/beatsPM/src/main/UI/src/app/editpost" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\eonej\Desktop\LC101\meera-group\beatsPM\src\main\java\com\example\beatsPM" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="beatsPM" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/beatsPM" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="bootRun" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -51,6 +138,77 @@
       <option name="presentableId" value="Default" />
       <updated>1639436478661</updated>
     </task>
+    <task id="LOCAL-00001" summary="fixed the ridiculous gradle issue">
+      <created>1640055331763</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640055331763</updated>
+    </task>
+    <task id="LOCAL-00002" summary="adapted controller to handle postmodel class into SQL, changed springbootapp to exclude the security auto config to make sure it could accept the http requests without upsetting CORS everytime">
+      <created>1640542496478</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1640542496478</updated>
+    </task>
+    <task id="LOCAL-00003" summary="amended postcontroller and angular forum component to get all posts">
+      <created>1640737765177</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1640737765177</updated>
+    </task>
+    <task id="LOCAL-00004" summary="created getmapping controller method, and forumcomponent grabbing all posts, created delete post button to utilize http delete to delete the post on forum page">
+      <created>1640744624419</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640744624419</updated>
+    </task>
+    <task id="LOCAL-00005" summary="created new component for Editing a post, edit button works and takes you an editPost page with all the post info filled in ready to edit.&#10;&#10;still need to make submit button work">
+      <created>1640828457086</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640828457087</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated footer with bootstrap content and stuck to bottom of page for all pages">
+      <created>1640905451627</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1640905451627</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated footer with bootstrap content and stuck to bottom of page for all pages">
+      <created>1640905457706</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1640905457706</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updated routing module in angular to make homecomponent run with no extra path on url">
+      <created>1641253023491</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1641253023491</updated>
+    </task>
+    <task id="LOCAL-00009" summary="searchPosts in forum.component.ts">
+      <created>1641259080834</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1641259080834</updated>
+    </task>
+    <task id="LOCAL-00010" summary="maybe if I commit it will let me merge">
+      <created>1641517894536</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1641517894536</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,5 +234,19 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="fixed the ridiculous gradle issue" />
+    <MESSAGE value="adapted controller to handle postmodel class into SQL, changed springbootapp to exclude the security auto config to make sure it could accept the http requests without upsetting CORS everytime" />
+    <MESSAGE value="amended postcontroller and angular forum component to get all posts" />
+    <MESSAGE value="created getmapping controller method, and forumcomponent grabbing all posts, created delete post button to utilize http delete to delete the post on forum page" />
+    <MESSAGE value="created new component for Editing a post, edit button works and takes you an editPost page wiht all the post info filled in ready to edit.&#10;&#10;still need to make submit button work" />
+    <MESSAGE value="created new component for Editing a post, edit button works and takes you an editPost page with all the post info filled in ready to edit.&#10;&#10;still need to make submit button work" />
+    <MESSAGE value="updated footer with bootstrap content and stuck to bottom of page for all pages" />
+    <MESSAGE value="updated routing module in angular to make homecomponent run with no extra path on url" />
+    <MESSAGE value="searchPosts in forum.component.ts" />
+    <MESSAGE value="maybe if I commit it will let me merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="maybe if I commit it will let me merge" />
   </component>
 </project>
