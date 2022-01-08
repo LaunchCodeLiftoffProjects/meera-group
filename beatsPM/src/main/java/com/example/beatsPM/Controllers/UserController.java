@@ -3,6 +3,8 @@ package com.example.beatsPM.Controllers;
 import com.example.beatsPM.Models.Data.UserRepository;
 import com.example.beatsPM.Models.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.HttpSession;
 import java.util.Optional;
@@ -30,5 +32,12 @@ public class UserController {
 
     private static void setUserInSession(HttpSession session, User user) {
         session.setAttribute(userSessionKey, user.getUserId());
+    }
+
+    @GetMapping("/register")
+    public String displayRegistrationForm(Model model) {
+        model.addAttribute(new RegisterFormDTO());
+        model.addAttribute("title", "Register");
+        return "register";
     }
 }
