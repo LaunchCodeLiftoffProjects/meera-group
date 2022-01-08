@@ -1,1 +1,11 @@
-<p>edm works!</p>
+<h3>------------------------------Edm Forum---------------------------------------</h3>
+<form *ngFor="let posts of postsGenre" (ngSubmit)="ngDeletePost(posts.postId)" >
+  <ul>
+    <li class="h3"> {{ posts.postTitle }} </li>
+    <p>{{ posts.postBody }}</p>
+    <p>{{ posts.genre }} </p>
+    <button class="button" type="submit">Delete Post</button>
+    <button (click)="editPost(posts.postId)" class="button" type="button">Edit Post</button>
+
+    <p>------------------</p>
+  </ul>

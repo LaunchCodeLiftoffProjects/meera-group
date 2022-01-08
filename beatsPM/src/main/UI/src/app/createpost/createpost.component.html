@@ -1,4 +1,4 @@
-<form [formGroup]="createPostForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="createPostForm" (ngSubmit)="createPost()">
     <div>
         <label for="posttitle" class="form-label">Post Title</label>
         <input type="text" placeholder="Post Title Here" formControlName="postTitle">
