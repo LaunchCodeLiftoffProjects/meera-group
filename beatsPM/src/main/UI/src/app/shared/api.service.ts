@@ -33,8 +33,8 @@ export class ApiService {
     }
 
     // WIP search http method
-    searchAllPosts(searchTerm: string): Observable<any> {
-            console.log(searchTerm);
-            return this.http.post('http://localhost:8080/results', JSON.stringify(searchTerm));
+    searchAllPosts(searchTerm: String): Observable<any> {
+            console.log(searchTerm + 'this is in apiservice');
+            return this.http.get('http://localhost:8080/results?searchTerm=' + searchTerm);
           }
 }

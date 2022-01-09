@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, FormControl} from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { PostObject } from '../createpost/PostObject';
 import { ApiService } from '../shared/api.service';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -18,6 +19,7 @@ posts: Array<PostObject> = [];
 
   constructor(private apiService: ApiService,
     private fb: FormBuilder,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -34,19 +36,15 @@ posts: Array<PostObject> = [];
       return this.createSearch.controls;
     };
   searchPosts(searchTerm:string){
-  this.apiService.searchAllPosts(searchTerm).subscribe(post => {
-          this.posts = post;
-   window.location.reload();
+          this.apiService.searchAllPosts(searchTerm).subscribe(post => {
+              this.posts = post;
     });
+    console.log(this.posts);
   }
 
   onSubmit(): void {
-    console.log(this.createSearch);
-
-    let postCreation = this.createSearch.value;
-//     alert(postCreation);
-      this.searchPosts(this.createSearch.controls['searchText'].value)
-
+    this.router.navigateByUrl('/forum');
+    this.searchPosts(this.createSearch.controls['searchText'].value);
   };
 
 }
