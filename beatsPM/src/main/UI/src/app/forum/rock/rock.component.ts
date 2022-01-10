@@ -3,6 +3,7 @@ import { Observable, throwError, } from 'rxjs';
 import { Router } from '@angular/router';
 import { ApiService } from '../../shared/api.service';
 import { PostObject } from '../../createpost/PostObject';
+import { DataShareService } from '../../shared/datashare.service';
 
 @Component({
   selector: 'app-rock',
@@ -15,9 +16,10 @@ export class RockComponent implements OnInit {
   postsGenre: Array<PostObject> = [];
 
 
-  constructor(private apiService: ApiService, private router: Router,) {
+  constructor(private apiService: ApiService, private router: Router,  private dataShareService: DataShareService) {
   this.apiService.getAllPosts().subscribe(post => {
-        this.posts = post;
+        this.dataShareService.setPosts(post);
+        this.posts = dataShareService.getPosts();
         for (let post of this.posts) {
           console.log(post.genre);
           if (post.genre == 'ROCK') {

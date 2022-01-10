@@ -5,10 +5,7 @@ import com.example.beatsPM.Models.PostData;
 import com.example.beatsPM.Models.PostModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -21,7 +18,7 @@ public class SearchController {
 
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @PostMapping("/results")
+    @GetMapping("/results")
     public @ResponseBody
     Iterable<PostModel> displaySearchResults( @RequestParam String searchTerm) {
         Iterable<PostModel> posts;
