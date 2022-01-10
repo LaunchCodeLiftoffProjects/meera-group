@@ -9,12 +9,18 @@ import { RockComponent } from './forum/rock/rock.component';
 import { RapComponent } from './forum/rap/rap.component';
 import { MiscComponent } from './forum/misc/misc.component';
 import { ForumComponent } from './forum/forum.component';
+import { ResultsComponent } from './forum/results/results.component';
 
 const routes: Routes = [
   {
       path: '',
       pathMatch: 'full',
       component: HomeComponent
+    },
+  {
+      path: 'results',
+      pathMatch: 'full',
+      component: ResultsComponent
     },
   {
     path: 'createpost',

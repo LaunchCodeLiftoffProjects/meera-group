@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostObject } from '../createpost/PostObject';
 import { ApiService } from '../shared/api.service';
+import { DataShareService } from '../shared/datashare.service';
 import { Observable, throwError, } from 'rxjs';
 import { Router} from '@angular/router';
 
@@ -14,10 +15,10 @@ export class ForumComponent implements OnInit {
   posts: Array<PostObject> = [];
 
 
-  constructor(private apiService: ApiService, private router: Router,) {
+  constructor(private apiService: ApiService, private router: Router, private dataShareService: DataShareService) {
   this.apiService.getAllPosts().subscribe(post => {
-          this.posts = post;
-
+          this.dataShareService.setPosts(post);
+          this.posts = dataShareService.getPosts();
     });
 
   }

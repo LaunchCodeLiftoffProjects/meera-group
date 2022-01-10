@@ -36,5 +36,5 @@ export class ApiService {
     searchAllPosts(searchTerm: String): Observable<any> {
             console.log(searchTerm + 'this is in apiservice');
             return this.http.get('http://localhost:8080/results?searchTerm=' + searchTerm);
-          }
+    }
 }
