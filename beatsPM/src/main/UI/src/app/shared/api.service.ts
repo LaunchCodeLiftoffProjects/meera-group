@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PostObject } from '../createpost/PostObject';
+import { CommentObj } from '../comment/commentObj'
 
 @Injectable({providedIn:'root'})
 export class ApiService {
@@ -37,4 +38,16 @@ export class ApiService {
             console.log(searchTerm + 'this is in apiservice');
             return this.http.get('http://localhost:8080/results?searchTerm=' + searchTerm);
     }
+
+    // http get method for receiving the comments for a particular postId
+      getAllCommentsForPost(postId: number): Observable<CommentObj[]> {
+        return this.http.get<CommentObj[]>('http://localhost:8080/comments/by-post/' + postId);
+      }
+
+
+      postComment(commentObj: CommentObj): Observable<any> {
+//       console.log('this is the comment Api service')
+//       console.log(commentObj);
+        return this.http.post<any>('http://localhost:8080/comments/add', commentObj);
+      }
 }
