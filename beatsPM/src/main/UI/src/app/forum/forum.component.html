@@ -27,9 +27,22 @@
         </div>
       </div>
       <div class="col-auto d-none d-lg-block">
-<!--        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
         <img src='{{"assets/images/" + posts.genre + ".png"}}'>
       </div>
+<div class="row gy-2">
+      {{filterComments(posts.postId)}}
+      <form *ngFor="let filteredComments of filteredComments" >
+
+        <div class="border rounded overflow-hidden shadow-sm">
+          <div>
+          <H5 class="font-weight-bold">Commenter Name</H5>
+
+          <p class="card-text">{{filteredComments.commentBody}}</p>
+          </div>
+        </div>
+
+      </form>
+</div>
 
 
       <form [formGroup]="commentForm" (ngSubmit)="leaveComment(posts.postId)">
@@ -40,8 +53,6 @@
           </div>
         </div>
       </form>
-      {{filterComments(posts.postId)}}
-      <form *ngFor="let filteredComments of filteredComments" > <p>--- {{filteredComments.commentBody}}</p></form>
 
     </div>
   </div>
