@@ -40,6 +40,8 @@
           </div>
         </div>
       </form>
+      {{filterComments(posts.postId)}}
+      <form *ngFor="let filteredComments of filteredComments" > <p>--- {{filteredComments.commentBody}}</p></form>
 
     </div>
   </div>

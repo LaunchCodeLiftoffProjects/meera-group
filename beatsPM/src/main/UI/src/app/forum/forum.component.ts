@@ -15,16 +15,17 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 export class ForumComponent implements OnInit {
 
   posts: Array<PostObject> = [];
+  comments:Array<CommentObj> = [];
+  filteredComments:Array<CommentObj> = [];
   commentForm!: FormGroup;
   commentObj!: CommentObj;
 
 
-  constructor(private apiService: ApiService, private router: Router, private dataShareService: DataShareService, private fb: FormBuilder) {
-  this.apiService.getAllPosts().subscribe(post => {
-          this.dataShareService.setPosts(post);
-          this.posts = dataShareService.getPosts();
-    });
 
+
+  constructor(private apiService: ApiService, private router: Router, private dataShareService: DataShareService, private fb: FormBuilder) {
+  this.apiService.getAllPosts().subscribe(post => { this.dataShareService.setPosts(post); this.posts = dataShareService.getPosts();});
+    this.apiService.getAllComments().subscribe(comments => {this.comments = comments; })
     this.commentObj={
     commentBody:'',
     postId: 0,
@@ -68,6 +69,19 @@ export class ForumComponent implements OnInit {
   })
 
   }
+
+  filterComments(postId: number){
+  this.filteredComments=[];
+  for(let i = 0; i<this.comments.length;i++){
+
+  if(this.comments[i].postId== postId){
+    this.filteredComments.push(this.comments[i]);
+  }
+  }
+  }
+
+
+
 
   searchPosts(searchTerm:string){
           this.apiService.searchAllPosts(searchTerm).subscribe(post => {

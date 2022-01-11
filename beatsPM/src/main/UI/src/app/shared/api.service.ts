@@ -40,8 +40,9 @@ export class ApiService {
     }
 
     // http get method for receiving the comments for a particular postId
-      getAllCommentsForPost(postId: number): Observable<CommentObj[]> {
-        return this.http.get<CommentObj[]>('http://localhost:8080/comments/by-post/' + postId);
+      getAllComments(): Observable<CommentObj[]> {
+
+        return this.http.get<CommentObj[]>('http://localhost:8080/comments');
       }
 
 
