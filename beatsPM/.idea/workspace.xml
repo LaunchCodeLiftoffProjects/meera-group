@@ -5,7 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e7693d0-a25b-4e06-9b8f-4f6ae7b9aee8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/bin/main/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/BeatsPmApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Controllers/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Controllers/postController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Models/Data/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Models/Data/postRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Models/dto/LoginFormDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Models/dto/RegisterFormDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Models/postModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/test/com/example/beatsPM/BeatsPmApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/UI/src/app/login/login.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/UI/src/app/login/login.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/UI/src/app/login/login.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/UI/src/app/login/login.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/UI/src/app/register/register.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/UI/src/app/register/register.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/UI/src/app/register/register.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/UI/src/app/register/register.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/beatsPM/Models/dto/LoginFormDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/beatsPM/Models/dto/RegisterFormDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UI/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/beatsPM/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/beatsPM/Controllers/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +70,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -67,6 +91,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -125,6 +150,36 @@
             <State />
           </value>
         </entry>
+        <entry key="c13fcda2-547f-4415-a374-bd2d01e2184f">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/eonej/Desktop/LC101/meera-group/beatsPM/src/main/UI/src/app/login" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="c13fcda2-547f-4415-a374-bd2d01e2184f" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />

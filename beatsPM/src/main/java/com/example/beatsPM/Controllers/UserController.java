@@ -2,6 +2,7 @@ package com.example.beatsPM.Controllers;
 
 import com.example.beatsPM.Models.Data.UserRepository;
 import com.example.beatsPM.Models.User;
+import com.example.beatsPM.Models.dto.RegisterFormDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
