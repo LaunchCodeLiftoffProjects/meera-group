@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError, } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { ApiService } from '../shared/api.service'
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { PostObject } from './PostObject';
 
