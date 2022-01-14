@@ -5,15 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e7693d0-a25b-4e06-9b8f-4f6ae7b9aee8" name="Changes" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/com/example/beatsPM/BeatsPmApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/BeatsPmApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Controllers/postController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Controllers/postController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Models/Data/postRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Models/Data/postRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Models/postModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Models/postModel.class" afterDir="false" />
-=======
       <change afterPath="$PROJECT_DIR$/bin/main/application.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/BeatsPmApplication.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bin/main/com/example/beatsPM/Controllers/UserController.class" afterDir="false" />
@@ -38,7 +29,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/UI/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/beatsPM/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/beatsPM/Controllers/UserController.java" afterDir="false" />
->>>>>>> users
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,15 +79,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/beatsPM/BeatsPmApplication.java" root0="FORCE_HIGHLIGHTING" />
-<<<<<<< HEAD
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/beatsPM/Models/PostModel.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/beatsPM/Controllers/PostController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/beatsPM/Models/Data/PostRepository.java" root0="FORCE_HIGHLIGHTING" />
-=======
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/beatsPM/Models/postModel.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/beatsPM/Controllers/postController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/beatsPM/Models/Data/postRepository.java" root0="FORCE_HIGHLIGHTING" />
->>>>>>> users
     <setting file="file://$PROJECT_DIR$/build.gradle" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="22FjuJOC3Gmpke313v16BX3zSFk" />
@@ -168,11 +152,6 @@
         </entry>
         <entry key="c13fcda2-547f-4415-a374-bd2d01e2184f">
           <value>
-<<<<<<< HEAD
-            <State />
-          </value>
-        </entry>
-=======
             <State>
               <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
               <option name="FILTERS">
@@ -201,7 +180,6 @@
     <option name="OPEN_GENERIC_TABS">
       <map>
         <entry key="c13fcda2-547f-4415-a374-bd2d01e2184f" value="TOOL_WINDOW" />
->>>>>>> users
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />

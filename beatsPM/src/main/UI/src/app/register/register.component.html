@@ -1,0 +1,30 @@
+<form method="post">
+    <div class="form-group">
+        <label>Email
+              <input class="form-control" #registerFormDTO.email type = 'text' placeholder="Enter a valid email address" />
+        </label>
+        <p class="error" th:errors= registerFormDTO.email></p>
+     </div>
+     <div class="form-group">
+       <label>Username
+             <input class="form-control" #registerFormDTO.username type = "text" placeholder="Enter your new username"/>
+       </label>
+       <p class="error" th:errors= registerFormDTO.username ></p>
+    </div>
+    <div class="form-group">
+       <label>Password
+             <input class="form-control" #registerFormDTO.password  type="password" placeholder="Enter a valid password"/>
+       </label>
+       <p class="error" th:errors= registerFormDTO.password ></p>
+    </div>
+    <div class="form-group">
+       <label>Verify Password
+             <input class="form-control" #registerFormDTO.verifyPassword type="password" placeholder="Re-enter your password"/>
+       </label>
+    </div>
+ 
+    <input type="submit" value="Register" />
+ </form>
+ 
+ </body>
+ </html>
