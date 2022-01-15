@@ -20,6 +20,14 @@ export class ApiService {
         return this.http.get<Array<PostObject>>('http://localhost:8080/forum');
       }
 
+   //http method for gettting posts by post id
+    getPostById(Id:number): Observable<PostObject>{
+       console.log("api get post");
+    return this.http.get<PostObject>('http://localhost:8080/viewpost/'+ Id)
+
+
+    }
+
     //http delete method to delete a post sent to backend
      deletePost(Id: number): void{
         console.log("this is the apiservice checker");
@@ -51,4 +59,6 @@ export class ApiService {
 //       console.log(commentObj);
         return this.http.post<any>('http://localhost:8080/comments/add', commentObj);
       }
+
+
 }

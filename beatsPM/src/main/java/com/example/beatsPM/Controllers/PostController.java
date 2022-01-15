@@ -2,6 +2,8 @@ package com.example.beatsPM.Controllers;
 
 import com.example.beatsPM.Models.Data.PostRepository;
 import com.example.beatsPM.Models.PostModel;
+import com.example.beatsPM.Models.Services.IPostService;
+import com.example.beatsPM.Models.Services.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
+import java.util.Optional;
 
 
 @CrossOrigin(origins = "*")
@@ -18,6 +21,9 @@ public class PostController {
 
         @Autowired
         private PostRepository postRepository;
+
+        @Autowired
+        private IPostService postService;
 
         // controller used to edit posts using http methods into the controller
         @CrossOrigin(origins = "http://localhost:4200/edit")
@@ -49,6 +55,21 @@ public class PostController {
         public @ResponseBody Iterable<PostModel> getAllPosts() {
                 return postRepository.findAll();
         }
+
+
+        // controller used to get posts by their Id
+        @GetMapping("/viewpost/{id}")
+        public @ResponseBody PostModel getPostById(@PathVariable int id) {
+
+                var val = postService.findById(id);
+
+
+                        System.out.println(val.get());
+                        return val.get();
+
+
+        }
+
 
         //controller used to delete a post from the database
         @CrossOrigin(origins = "*")

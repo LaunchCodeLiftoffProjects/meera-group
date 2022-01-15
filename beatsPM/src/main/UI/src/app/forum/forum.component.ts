@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { PostObject } from '../createpost/PostObject';
 import { ApiService } from '../shared/api.service';
@@ -80,7 +81,9 @@ export class ForumComponent implements OnInit {
   }
   }
 
-
+viewPost(postId: number){
+        this.router.navigateByUrl('/viewpost/'+ postId);
+}
 
 
   searchPosts(searchTerm:string){
