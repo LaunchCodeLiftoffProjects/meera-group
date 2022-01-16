@@ -48,8 +48,7 @@ export class ForumComponent implements OnInit {
      }
 
   ngDeletePost(postId: number) {
-      console.log("please work")
-      this.apiService.deletePost(postId);
+      console.log(this.apiService.deletePost(postId));
       this.reloadCurrentPage();
   }
 

@@ -28,7 +28,7 @@ public class CommentsController {
     @PostMapping("/comments/add")
     public ResponseEntity<Void> createComment(@RequestBody CommentModel commentModel){
         System.out.println("This is the Comments Controller");
-        System.out.println(commentModel.getPostId());
+//        System.out.println(commentModel.getPostId());
 
         commentsRepository.save(commentModel);
         return new ResponseEntity<>(HttpStatus.CREATED);
