@@ -6,6 +6,8 @@ import { ApiService } from '../shared/api.service';
 import { Observable, throwError, } from 'rxjs';
 import { CommentObj } from '../comment/commentObj'
 import { FormBuilder, FormGroup, FormControl, Validators, } from '@angular/forms';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-viewpost',
@@ -14,18 +16,26 @@ import { FormBuilder, FormGroup, FormControl, Validators, } from '@angular/forms
 })
 export class ViewpostComponent implements OnInit {
   postId: number;
+
   post!: PostObject;
+  url: string = "https://www.youtube.com/embed/"
   comments:Array<CommentObj> = [];
   filteredComments:Array<CommentObj> = [];
   commentForm!: FormGroup;
   commentObj!: CommentObj;
 
-  constructor(  private apiService: ApiService,  private router: Router,private route: ActivatedRoute, private fb: FormBuilder ) {
+
+
+  constructor( public sanitizer: DomSanitizer, private apiService: ApiService,  private router: Router,private route: ActivatedRoute, private fb: FormBuilder ) {
     this.postId = route.snapshot.params.id;
+
+
 
     this.apiService.getPostById(this.postId).subscribe((response : PostObject) =>{
     this.post = response;
     })
+
+
 
     this.apiService.getCommentsByPostId(this.postId).subscribe((response : CommentObj[]) =>{
     this.comments = response;
@@ -42,15 +52,19 @@ export class ViewpostComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
  this.initializeForm();
       this.commentForm = new FormGroup({
         commentBody: new FormControl('',  Validators.required),
 
       });
 
+//
+
   }
     reloadCurrentPage() {
         window.location.reload();
+
        }
 
    ngDeletePost(postId: number) {
@@ -60,11 +74,19 @@ export class ViewpostComponent implements OnInit {
     }
       editPost(postId: number){
             this.router.navigateByUrl('/editpost/'+ postId);
-            console.log(postId)
+
       }
 
 
 
+ youtube_parser(){
+    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    var match = this.post.youtubeLink.match(regExp);
+
+//     document.getElementById("myFrame").src = "https://www.youtube.com/embed/LrkHZpQ05UU"
+
+    return ((match&&match[7].length==11)? match[7] : false);
+}
 
 
 

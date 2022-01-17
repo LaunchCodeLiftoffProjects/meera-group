@@ -1,12 +1,33 @@
 
 <br>
+
+
 <main class="container-fluid">
+
+
+
+
+
+
+
   <div class="row mb-2 justify-content-md-center">
+
     <div class="col-md-9 align-self-center ">
-  <div class="row g-0 border rounded-3 overflow-hidden flex-md-row mb-3 shadow-lg h-md-250 position-relative">
+
+      <div class="row g-0 border rounded-3 overflow-hidden flex-md-row mb-3 shadow-lg h-md-250 position-relative">
+
     <div class="col p-4 d-flex flex-column">
 
+
+      <div class="ratio ratio-16x9 border rounded-3 overflow-hidden">
+        <iframe id="myFrame" src='https://www.youtube.com/embed/{{youtube_parser()}}' title="YouTube video" allowfullscreen></iframe>
+      </div>
+      <br>
+
 <h3> {{ post.postTitle }} </h3>
+
+      <p>{{youtube_parser()}}</p>
+
     <p>{{ post.postBody }}</p>
     <p>{{ post.genre }} </p>
       <div class="btn-sm-group">
