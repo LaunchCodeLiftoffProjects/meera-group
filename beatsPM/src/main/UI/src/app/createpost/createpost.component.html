@@ -1,27 +1,45 @@
+
+
+<div class="container-fluid">
+<div class="row mb-2 justify-content-md-center">
+  <div class="col-md-7 align-self-center ">
+    <br>
+    <div class="row g-0 border rounded-3 overflow-hidden flex-md-row mb- shadow-lg h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column">
 <form [formGroup]="createPostForm" (ngSubmit)="createPost()">
-    <div>
-        <label for="posttitle" class="form-label">Post Title</label>
-        <input type="text" placeholder="Post Title Here" formControlName="postTitle">
+  <div class="form-group">
+        <label class="form-label">Post Title</label>
+        <input  class="form-control" type="text" placeholder="Post Title Here" formControlName="postTitle">
     </div>
-    <div>
-        <label for="postbody" class="form-label">Post Text</label>
-        <textarea rows="4" formControlName="postBody"></textarea>
+<br>
+    <div class="form-group">
+        <label class="form-label">Post Text</label>
+        <textarea  class="form-control" rows="4" formControlName="postBody"></textarea>
     </div>
-    <div>
-        <label for="rock">Rock</label>
-        <input type="radio" formControlName="genre" id="rock" value="ROCK"><br>
-        
-        <label for="edm">EDM</label>
-        <input type="radio" formControlName="genre" id="edm" value="EDM"><br>
-        
-        <label for="jazz">Jazz</label>
-        <input type="radio" formControlName="genre" id="jazz" value="JAZZ"><br>
-        
-        <label for="rap">Rap</label>
-        <input type="radio" formControlName="genre" id="rap" value="RAP"><br>
-        
-        <label for="misc">Misc</label>
-        <input type="radio" formControlName="genre" id="misc" value="MISC">
+<br>
+
+    <div class="btn-group">
+      <input  class="btn-check" type="radio" formControlName="genre" id="rock" value="ROCK">
+        <label class="btn btn-outline-primary" for="rock">Rock</label>
+
+      <input  class="btn-check" type="radio" formControlName="genre" id="edm" value="EDM">
+        <label class="btn btn-outline-primary" for="edm">EDM</label>
+
+      <input  class="btn-check" type="radio" formControlName="genre" id="jazz" value="JAZZ">
+        <label class="btn btn-outline-primary" for="jazz">Jazz</label>
+
+      <input  class="btn-check" type="radio" formControlName="genre" id="rap" value="RAP">
+        <label class="btn btn-outline-primary" for="rap">Rap</label>
+
+      <input class="btn-check" type="radio" formControlName="genre" id="misc" value="MISC">
+        <label class="btn btn-outline-primary"  for="misc">Misc</label>
+
     </div>
-        <button class="button" type="submit">Submit</button>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-primary" type="submit">Submit</button>
+</div>
 </form>
+</div>
+  </div>
+</div>
+</div>
