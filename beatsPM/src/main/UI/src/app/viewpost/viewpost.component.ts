@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, FormControl, Validators, } from '@angular/forms
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 
+
 @Component({
   selector: 'app-viewpost',
   templateUrl: './viewpost.component.html',
@@ -18,7 +19,8 @@ export class ViewpostComponent implements OnInit {
   postId: number;
 
   post!: PostObject;
-  url: string = "https://www.youtube.com/embed/"
+  url!: string;
+  sanUrl!: SafeResourceUrl;
   comments:Array<CommentObj> = [];
   filteredComments:Array<CommentObj> = [];
   commentForm!: FormGroup;
@@ -49,6 +51,9 @@ export class ViewpostComponent implements OnInit {
         commentId:0,
         }
 
+
+
+
   }
 
   ngOnInit(): void {
@@ -58,8 +63,12 @@ export class ViewpostComponent implements OnInit {
         commentBody: new FormControl('',  Validators.required),
 
       });
+this.url= "https://www.youtube.com/embed/"+ this.youtube_parser();
+this.sanUrl = this.getSanitizedURL();
+console.log(this.sanUrl);
 
-//
+
+
 
   }
     reloadCurrentPage() {
@@ -80,12 +89,17 @@ export class ViewpostComponent implements OnInit {
 
 
  youtube_parser(){
-    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-    var match = this.post.youtubeLink.match(regExp);
+    let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    let match = this.post.youtubeLink.match(regExp);
+    let returnMatch = '';
 
+    if (match![7]!=null){
+    returnMatch = match![7];
+    }
+    return returnMatch;
 //     document.getElementById("myFrame").src = "https://www.youtube.com/embed/LrkHZpQ05UU"
 
-    return ((match&&match[7].length==11)? match[7] : false);
+//     return ((match&&match[7].length==11)? match[7] : false);
 }
 
 
@@ -114,6 +128,9 @@ export class ViewpostComponent implements OnInit {
    }
    }
    }
+  getSanitizedURL() {
+    return this.sanitizer.bypassSecurityTrustUrl(this.url);
+  }
 
  initializeForm(): void {
        this.commentForm = this.fb.group({

@@ -20,13 +20,14 @@
 
 
       <div class="ratio ratio-16x9 border rounded-3 overflow-hidden">
-        <iframe id="myFrame" src='https://www.youtube.com/embed/{{youtube_parser()}}' title="YouTube video" allowfullscreen></iframe>
+        <iframe id="videoIframe" [src]="sanUrl" title="YouTube video" allowfullscreen></iframe>
       </div>
       <br>
 
 <h3> {{ post.postTitle }} </h3>
 
       <p>{{youtube_parser()}}</p>
+<!--      <p>{{url}}</p>&ndash;&gt;-->
 
     <p>{{ post.postBody }}</p>
     <p>{{ post.genre }} </p>
