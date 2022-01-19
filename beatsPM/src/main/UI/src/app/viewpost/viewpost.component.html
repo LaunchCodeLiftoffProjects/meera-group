@@ -15,18 +15,12 @@
     <div class="col p-4 d-flex flex-column">
 
 
-      <div *ngIf = "post.youtubeLink !== 'No Link'" class="ratio ratio-16x9 border rounded-3 overflow-hidden">
-        <iframe id="videoIframe" [src]="getYoutubeURL(post.youtubeLink)" title="YouTube video" allowfullscreen></iframe>
+      <div *ngIf = "post?.youtubeLink !== 'No Link'" class="ratio ratio-16x9 border rounded-3 overflow-hidden">
+        <iframe id="videoIframe" [src]="sanUrl" title="YouTube video" allowfullscreen></iframe>
       </div>
       <br>
 
 <h3 > {{ post?.postTitle }} </h3>
-
-
-
-      <p>{{getYoutubeURL(post.youtubeLink)}}</p>
-
-
     <p>{{ post?.postBody }}</p>
     <p>{{ post?.genre }} </p>
       <div class="btn-sm-group">
@@ -47,7 +41,7 @@
             <div class="col p-4 d-flex flex-column">
   <div class="row gy-2">
     {{filterComments(postId)}}
-    <form *ngFor="let filteredComments of filteredComments" >
+    <div *ngFor="let filteredComments of filteredComments" >
       <H5 class="font-weight-bold">Commenter Name</H5>
       <div class="border mb-3 rounded overflow-hidden shadow-sm">
         <div class="col p-1">
@@ -57,14 +51,14 @@
         </div>
       </div>
 
-    </form>
+    </div>
   </div>
 
 
   <form [formGroup]="commentForm" (ngSubmit)="leaveComment(post.postId)">
     <div class=" p-4 d-flex flex-column position-static">
 
-      <textarea class="form-control" rows="3" formControlName="commentBody"></textarea>
+      <textarea class="form-control" rows="3" formControlName="commentBody" autocomplete="off"></textarea>
       <div class = " p-3 d-flex flex-column">
         <div class="btn-sm-group">
         <button  class="btn btn-info " type="submit">Post Comment</button>
