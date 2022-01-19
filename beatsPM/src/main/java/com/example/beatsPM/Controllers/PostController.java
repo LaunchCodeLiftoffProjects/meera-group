@@ -58,6 +58,7 @@ public class PostController {
 
 
         // controller used to get posts by their Id
+        @CrossOrigin(origins = "*")
         @GetMapping("/viewpost/{id}")
         public @ResponseBody PostModel getPostById(@PathVariable int id) {
 

@@ -53,9 +53,9 @@ export class ApiService {
         return this.http.get<CommentObj[]>('http://localhost:8080/comments');
       }
 
-      getCommentsByPostId(Id: number):Observable<CommentObj[]>{
-      return this.http.get<CommentObj[]>('http://localhost:8080/viewcomments/'+ Id)
-      }
+//       getCommentsByPostId(Id: number):Observable<CommentObj[]>{
+//       return this.http.get<CommentObj[]>('http://localhost:8080/viewcomments/'+ Id)
+//       }
 
 
       postComment(commentObj: CommentObj): Observable<any> {

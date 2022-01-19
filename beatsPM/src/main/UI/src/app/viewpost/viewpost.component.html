@@ -20,21 +20,18 @@
 
 
       <div class="ratio ratio-16x9 border rounded-3 overflow-hidden">
-        <iframe id="videoIframe" [src]="sanUrl" title="YouTube video" allowfullscreen></iframe>
+        <iframe id="videoIframe" [src]="getYoutubeURL(post.youtubeLink)" title="YouTube video" allowfullscreen></iframe>
       </div>
       <br>
 
-<h3> {{ post.postTitle }} </h3>
+<h3> {{ post?.postTitle }} </h3>
 
-      <p>{{youtube_parser()}}</p>
-<!--      <p>{{url}}</p>&ndash;&gt;-->
-
-    <p>{{ post.postBody }}</p>
-    <p>{{ post.genre }} </p>
+    <p>{{ post?.postBody }}</p>
+    <p>{{ post?.genre }} </p>
       <div class="btn-sm-group">
         <button class="btn btn-danger" (click)="ngDeletePost(post.postId)" >Delete Post</button>
 
-        <button (click)="editPost(post.postId)" class="btn btn-secondary" type="button">Edit Post</button>
+        <button (click)="editPost(postId)" class="btn btn-secondary" type="button">Edit Post</button>
       </div>
 
     </div>
@@ -48,7 +45,7 @@
           <div class="row g-0 border rounded-3 overflow-hidden flex-md-row mb-3 shadow-lg h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column">
   <div class="row gy-2">
-    {{filterComments(post.postId)}}
+    {{filterComments(postId)}}
     <form *ngFor="let filteredComments of filteredComments" >
       <H5 class="font-weight-bold">Commenter Name</H5>
       <div class="border mb-3 rounded overflow-hidden shadow-sm">

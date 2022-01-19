@@ -50,7 +50,7 @@ export class CreatepostComponent implements OnInit {
   createPost() {
     this.postObject.postTitle = this.createPostForm.controls['postTitle'].value;
     this.postObject.postBody = this.createPostForm.controls['postBody'].value;
-    this.postObject.youtubeLink =this.createPostForm.controls['youtubeLink'].value;
+    this.postObject.youtubeLink = this.extractYoutubeId(this.createPostForm.controls['youtubeLink'].value);
     this.postObject.genre = this.createPostForm.controls['genre'].value;
 
     this.api.createPost(this.postObject).subscribe((data) => {
@@ -68,7 +68,19 @@ export class CreatepostComponent implements OnInit {
       genre: '',
       });
     };
+ extractYoutubeId(url: string){
+    let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
 
+    let Id : string;
+    let match = url.match(regExp);
+
+    if(((match&&match[7].length==11)? match[7] : false)){
+    Id = match![7];
+    } else{
+    Id = "No Link"
+    }
+return Id;
+}
     get f() {
       return this.createPostForm.controls;
     };

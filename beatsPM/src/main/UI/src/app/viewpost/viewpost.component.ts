@@ -19,8 +19,8 @@ export class ViewpostComponent implements OnInit {
   postId: number;
 
   post!: PostObject;
-  url!: string;
-  sanUrl!: SafeResourceUrl;
+  youtubeId!: string;
+  sanUrl !: SafeResourceUrl;
   comments:Array<CommentObj> = [];
   filteredComments:Array<CommentObj> = [];
   commentForm!: FormGroup;
@@ -33,15 +33,15 @@ export class ViewpostComponent implements OnInit {
 
 
 
-    this.apiService.getPostById(this.postId).subscribe((response : PostObject) =>{
+    this.apiService.getPostById(route.snapshot.params.id).subscribe((response : PostObject) =>{
     this.post = response;
     })
 
+//   this.sanUrl = this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/");
 
-
-    this.apiService.getCommentsByPostId(this.postId).subscribe((response : CommentObj[]) =>{
-    this.comments = response;
-    })
+//     this.apiService.getCommentsByPostId(this.postId).subscribe((response : CommentObj[]) =>{
+//     this.comments = response;
+//     })
 
 
      this.apiService.getAllComments().subscribe(comments => {this.comments = comments; })
@@ -50,6 +50,8 @@ export class ViewpostComponent implements OnInit {
         postId: 0,
         commentId:0,
         }
+
+
 
 
 
@@ -63,14 +65,13 @@ export class ViewpostComponent implements OnInit {
         commentBody: new FormControl('',  Validators.required),
 
       });
-this.url= "https://www.youtube.com/embed/"+ this.youtube_parser();
-this.sanUrl = this.getSanitizedURL();
-console.log(this.sanUrl);
+
 
 
 
 
   }
+
     reloadCurrentPage() {
         window.location.reload();
 
@@ -87,20 +88,26 @@ console.log(this.sanUrl);
       }
 
 
+      getYoutubeURL(id: string){
+      return this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/"+id);
+      }
 
- youtube_parser(){
-    let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-    let match = this.post.youtubeLink.match(regExp);
-    let returnMatch = '';
 
-    if (match![7]!=null){
-    returnMatch = match![7];
-    }
-    return returnMatch;
-//     document.getElementById("myFrame").src = "https://www.youtube.com/embed/LrkHZpQ05UU"
 
-//     return ((match&&match[7].length==11)? match[7] : false);
-}
+//  extractYoutubeId(url: string){
+//     let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+// //     let match = this.post.youtubeLink.match(regExp);
+//     let match = url;
+//     let returnMatch = '';
+//
+//     if (match![7]!=null){
+//     returnMatch ="https://www.youtube.com/embed/" + match![7];
+//     }
+//     return returnMatch;
+// //     document.getElementById("myFrame").src = "https://www.youtube.com/embed/LrkHZpQ05UU"
+//
+// //     return ((match&&match[7].length==11)? match[7] : false);
+// }
 
 
 
@@ -128,9 +135,6 @@ console.log(this.sanUrl);
    }
    }
    }
-  getSanitizedURL() {
-    return this.sanitizer.bypassSecurityTrustUrl(this.url);
-  }
 
  initializeForm(): void {
        this.commentForm = this.fb.group({
