@@ -7,6 +7,7 @@ import { Observable, throwError, } from 'rxjs';
 import { CommentObj } from '../comment/commentObj'
 import { FormBuilder, FormGroup, FormControl, Validators, } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 
 

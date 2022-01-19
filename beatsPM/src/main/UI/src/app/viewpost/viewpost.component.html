@@ -1,9 +1,5 @@
-
-<br>
-
-
-<main class="container-fluid">
-
+<main class="container-fluid" >
+  <br>
 
 
 
@@ -19,12 +15,17 @@
     <div class="col p-4 d-flex flex-column">
 
 
-      <div class="ratio ratio-16x9 border rounded-3 overflow-hidden">
+      <div *ngIf = "post.youtubeLink !== 'No Link'" class="ratio ratio-16x9 border rounded-3 overflow-hidden">
         <iframe id="videoIframe" [src]="getYoutubeURL(post.youtubeLink)" title="YouTube video" allowfullscreen></iframe>
       </div>
       <br>
 
-<h3> {{ post?.postTitle }} </h3>
+<h3 > {{ post?.postTitle }} </h3>
+
+
+
+      <p>{{getYoutubeURL(post.youtubeLink)}}</p>
+
 
     <p>{{ post?.postBody }}</p>
     <p>{{ post?.genre }} </p>
