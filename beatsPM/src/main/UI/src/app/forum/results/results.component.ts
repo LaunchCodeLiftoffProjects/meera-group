@@ -37,4 +37,8 @@ export class ResultsComponent implements OnInit {
         this.router.navigateByUrl('/editpost/'+ postId);
         console.log(postId)
   }
+
+  viewPost(postId: number){
+          this.router.navigateByUrl('/viewpost/'+ postId);
+  }
 }

@@ -72,7 +72,7 @@ export class ViewpostComponent implements OnInit {
    ngDeletePost(postId: number) {
         console.log("please work")
         this.apiService.deletePost(postId);
-        this.reloadCurrentPage();
+        this.router.navigateByUrl('/forum');
     }
       editPost(postId: number){
             this.router.navigateByUrl('/editpost/'+ postId);
