@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError, } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { ApiService } from '../shared/api.service';
+import { AuthService } from '../shared/auth.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private http: HttpClient,
-    private api: ApiService
+    private api: AuthService
   ) { 
     this.registerObject = {
       email: "",

@@ -5,7 +5,7 @@ import { Observable, throwError, } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { LoginObject } from './LoginObject';
-import { ApiService } from '../shared/api.service';
+import { AuthService } from '../shared/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private http: HttpClient,
-    private api: ApiService)
+    private api: AuthService)
      { 
       this.loginObject = {
       username: "",
