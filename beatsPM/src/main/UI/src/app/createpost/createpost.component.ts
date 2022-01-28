@@ -49,9 +49,9 @@ export class CreatepostComponent implements OnInit {
     this.postObject.postBody = this.createPostForm.controls['postBody'].value;
     this.postObject.genre = this.createPostForm.controls['genre'].value;
 
-    this.api.createPost(this.postObject).subscribe((data) => {
+    this.api.createPost(this.postObject).subscribe((data: any) => {
       this.router.navigateByUrl('/forum');
-    }, error => {
+    }, (error: any) => {
       throwError(error);
     })
   }

@@ -1,0 +1,21 @@
+<form method="post">
+    <div class="form-group">
+       <label for="username">Username
+             <input class="form-control" type = 'text'>
+       </label>
+    <p! class="error" th:errors="${loginFormDTO.username}"\></p>
+    </div>
+    <div class="form-group">
+       <label for = "password">Password
+             <input class="form-control" type="password">
+       </label>
+       <p! class="error" th:errors="${loginFormDTO.password}"></p>
+    </div>
+ 
+    <input type="submit" class="btn btn-primary" value="Log In" />
+ </form>
+ 
+ <p>Don't have an account? <a href="/register">Register for one.</a></p>
+ 
+ </body>
+ </html>

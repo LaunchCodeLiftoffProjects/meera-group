@@ -3,9 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PostObject } from '../createpost/PostObject';
 import { CommentObj } from '../comment/commentObj'
+import { RegisterObject } from '../register/RegisterObject';
 
 @Injectable({providedIn:'root'})
 export class ApiService {
+  addUser(registerObject: RegisterObject) {
+    throw new Error('Method not implemented.');
+  }
     status: any;
 
     constructor(private http: HttpClient){}

@@ -28,8 +28,40 @@ export class LoginComponent implements OnInit {
     }
   ;}
 
-  ngOnInit(): void {
+  loginUser () {
+    this.loginObject.username = this.loginForm.controls['username'].value;
+    this.loginObject.password = this.loginForm.controls['password'].value;
+
+    this.api.loginUser(this.loginObject).subscribe((data) => {
+      this.router.navigateByUrl('/login');
+    }, (error) => {
+      throwError(error);
+    })
   }
+  ngOnInit(): void {
+    this.initializeForm();
+    this.loginForm = new FormGroup({
+      username: new FormControl('',  Validators.required),
+      password: new FormControl('',  Validators.required),
+    });
+  };
+  
+  initializeForm(): void {
+    this.loginForm = this.fb.group({
+      username: '',
+      password: '',
+      });
+    };
+  
+  get f() {
+    return this.loginForm.controls;
+  };
+
+
+onSubmit(): void {
+};
+
+
   
 
   
