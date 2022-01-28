@@ -55,6 +55,10 @@ export class RapComponent implements OnInit {
         console.log(postId)
   }
 
+    viewPost(postId: number){
+            this.router.navigateByUrl('/viewpost/'+ postId);
+    }
+
   searchPosts(searchTerm:string){
           this.apiService.searchAllPosts(searchTerm).subscribe(post => {
           this.posts = post;

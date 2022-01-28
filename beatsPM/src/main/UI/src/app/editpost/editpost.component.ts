@@ -37,6 +37,7 @@ constructor(
     this.postObject = {
       postTitle: '',
       postBody: '',
+      youtubeLink: '',
       genre: '',
       postId: 0,
     }
@@ -60,6 +61,7 @@ constructor(
       this.editPostForm = new FormGroup({
       postBody: new FormControl(this.posts[this.id].postBody,  Validators.required),
       postTitle: new FormControl(this.posts[this.id].postTitle,  Validators.required),
+      youtubeLink: new FormControl(this.posts[this.id].youtubeLink, Validators.required),
       genre: new FormControl(this.posts[this.id].genre,  Validators.required),
       });
     });
@@ -68,6 +70,7 @@ constructor(
     editPost() {
       this.postObject.postTitle = this.editPostForm.controls['postTitle'].value;
       this.postObject.postBody = this.editPostForm.controls['postBody'].value;
+      this.postObject.youtubeLink = this.editPostForm.controls['youtubeLink'].value;
       this.postObject.genre = this.editPostForm.controls['genre'].value;
 
       this.api.editPost(this.postObject,this.postId).subscribe((data) => {
@@ -82,6 +85,7 @@ constructor(
         this.editPostForm = this.fb.group({
           postTitle: '',
           postBody: '',
+          youtubeLink: '',
           genre: '',
           });
         };

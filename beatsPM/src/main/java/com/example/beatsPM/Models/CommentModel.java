@@ -16,7 +16,7 @@ public class CommentModel {
 //    @ManyToOne(fetch = LAZY)
 //    @JoinColumn(name = "postId", referencedColumnName = "postId")
     @NotNull
-    private int postId;
+    private Integer postId;
 
     @GeneratedValue
     @Id

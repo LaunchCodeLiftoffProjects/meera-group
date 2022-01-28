@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { PostObject } from '../createpost/PostObject';
 import { ApiService } from '../shared/api.service';
@@ -47,8 +48,7 @@ export class ForumComponent implements OnInit {
      }
 
   ngDeletePost(postId: number) {
-      console.log("please work")
-      this.apiService.deletePost(postId);
+      console.log(this.apiService.deletePost(postId));
       this.reloadCurrentPage();
   }
 
@@ -57,30 +57,9 @@ export class ForumComponent implements OnInit {
         console.log(postId)
   }
 
-  leaveComment(postId: number){
-//   console.log(postId);
-  this.commentObj.postId = postId;
-  this.commentObj.commentBody = this.commentForm.controls['commentBody'].value;
-
-  this.apiService.postComment(this.commentObj).subscribe((data)=>{
-  this.reloadCurrentPage();
-  }, error=> {
-  throwError(error);
-  })
-
-  }
-
-  filterComments(postId: number){
-  this.filteredComments=[];
-  for(let i = 0; i<this.comments.length;i++){
-
-  if(this.comments[i].postId== postId){
-    this.filteredComments.push(this.comments[i]);
-  }
-  }
-  }
-
-
+viewPost(postId: number){
+        this.router.navigateByUrl('/viewpost/'+ postId);
+}
 
 
   searchPosts(searchTerm:string){

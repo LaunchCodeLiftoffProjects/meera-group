@@ -17,18 +17,18 @@ public class CommentsController {
     @Autowired
     private CommentsRepository commentsRepository;
 
-    @CrossOrigin(origins = "http://localhost:4200/forum")
+    @CrossOrigin(origins = "*")
     @GetMapping("/comments")
     public @ResponseBody
     Iterable<CommentModel> getAllComments() {
         return commentsRepository.findAll();
     }
 
-    @CrossOrigin(origins = "http://localhost:4200/forum")
+    @CrossOrigin(origins = "*")
     @PostMapping("/comments/add")
     public ResponseEntity<Void> createComment(@RequestBody CommentModel commentModel){
         System.out.println("This is the Comments Controller");
-        System.out.println(commentModel.getPostId());
+//        System.out.println(commentModel.getPostId());
 
         commentsRepository.save(commentModel);
         return new ResponseEntity<>(HttpStatus.CREATED);

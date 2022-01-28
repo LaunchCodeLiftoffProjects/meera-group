@@ -1,12 +1,30 @@
-<form *ngFor="let posts of postsGenre" (ngSubmit)="ngDeletePost(posts.postId)" >
 
-  <h3>------------------------------Rap Forum---------------------------------------</h3>
-  <ul>
-    <li class="h3"> {{ posts.postTitle }} </li>
-    <p>{{ posts.postBody }}</p>
-    <p>{{ posts.genre }} </p>
-    <button class="button" type="submit">Delete Post</button>
-    <button (click)="editPost(posts.postId)" class="button" type="button">Edit Post</button>
+  <main class="container-fluid">
+    <br>
+    <h3 class="text-center"> Welcome to the Rap Forum</h3>
+    <form *ngFor="let posts of postsGenre" (ngSubmit)="ngDeletePost(posts.postId)" >
+      <br>
 
-    <p>------------------</p>
-  </ul>
+      <div class="row mb-2 justify-content-md-center">
+        <div class="col-md-9 align-self-center ">
+          <div class="row g-0 border rounded-3 overflow-hidden flex-md-row mb-4 shadow-lg h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column">
+              <strong class="d-inline-block mb-2 text-primary">{{ posts.genre }}</strong>
+              <h3 class="mb-0">{{ posts.postTitle }}</h3>
+              <p class="card-text mb-auto">{{ posts.postBody }}</p>
+              <div class="btn-sm-group">
+                <button class="btn btn-danger" (click)="ngDeletePost(posts.postId)" >Delete Post</button>
+                                <button (click)="viewPost(posts.postId)" class="btn btn-primary" type="button">View Post</button>
+                <button (click)="editPost(posts.postId)" class="btn btn-secondary" type="button">Edit Post</button>
+              </div>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src='{{"assets/images/" + posts.genre + ".png"}}'>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </main>

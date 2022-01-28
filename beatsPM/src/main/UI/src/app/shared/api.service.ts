@@ -20,12 +20,20 @@ export class ApiService {
         return this.http.get<Array<PostObject>>('http://localhost:8080/forum');
       }
 
+   //http method for gettting posts by post id
+    getPostById(Id:number): Observable<PostObject>{
+       console.log("api get post");
+    return this.http.get<PostObject>('http://localhost:8080/viewpost/'+ Id)
+
+
+    }
+
     //http delete method to delete a post sent to backend
-     deletePost(Id: number): void{
+     deletePost(Id: number): string{
         console.log("this is the apiservice checker");
         console.log(Id);
-        this.http.delete('http://localhost:8080/forum/' + Id).subscribe(() => this.status = 'Delete successful');
-        console.log('it was maybe deleted?')
+       this.http.delete('http://localhost:8080/delete/' + Id).subscribe(() => this.status = 'Delete successful');
+      return this.status;
      }
 
     //http put method to edit post data using the postID
@@ -45,10 +53,16 @@ export class ApiService {
         return this.http.get<CommentObj[]>('http://localhost:8080/comments');
       }
 
+//       getCommentsByPostId(Id: number):Observable<CommentObj[]>{
+//       return this.http.get<CommentObj[]>('http://localhost:8080/viewcomments/'+ Id)
+//       }
+
 
       postComment(commentObj: CommentObj): Observable<any> {
 //       console.log('this is the comment Api service')
 //       console.log(commentObj);
         return this.http.post<any>('http://localhost:8080/comments/add', commentObj);
       }
+
+
 }

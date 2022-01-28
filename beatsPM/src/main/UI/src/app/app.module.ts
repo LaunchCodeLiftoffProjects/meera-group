@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EditpostComponent } from './editpost/editpost.component';
 import { ResultsComponent } from './forum/results/results.component';
+import { ViewpostComponent } from './viewpost/viewpost.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,8 @@ import { ResultsComponent } from './forum/results/results.component';
     MiscComponent,
     EditpostComponent,
     ResultsComponent,
+    ViewpostComponent,
+
   ],
   imports: [
     BrowserModule,

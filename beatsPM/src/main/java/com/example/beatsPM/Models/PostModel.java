@@ -13,6 +13,8 @@ public class PostModel {
     private String postTitle;
     @NotNull
     private String postBody;
+    @NotNull
+    private String youtubeLink;
 
     @GeneratedValue
     @Id
@@ -48,5 +50,13 @@ public class PostModel {
 
     public int getPostId() {
         return postId;
+    }
+
+    public String getYoutubeLink() {
+        return youtubeLink;
+    }
+
+    public void setYoutubeLink(String youtubeLink) {
+        this.youtubeLink = youtubeLink;
     }
 }

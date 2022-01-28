@@ -9,43 +9,34 @@
 <!--    <p>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
 <!--  </ul>-->
 <!--</form>-->
+
 <main class="container-fluid">
 <form *ngFor="let posts of posts" (ngSubmit)="ngDeletePost(posts.postId)" >
   <br>
-<div class="row mb-2">
-  <div class="col-md-6">
-    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-      <div class="col p-4 d-flex flex-column position-static">
+  <div class="row mb-2 justify-content-md-center">
+  <div class="col-md-9 align-self-center ">
+    <div class="row g-0 border rounded-3 overflow-hidden flex-md-row mb-4 shadow-lg h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column">
         <strong class="d-inline-block mb-2 text-primary">{{ posts.genre }}</strong>
         <h3 class="mb-0">{{ posts.postTitle }}</h3>
 <!--        <div class="mb-1 text-muted">Nov 12</div>-->
         <p class="card-text mb-auto">{{ posts.postBody }}</p>
 <!--        <a href="#" class="stretched-link">Continue reading</a>-->
-        <div class="btn-group">
-        <button class="btn btn-danger" type="submit">Delete Post</button>
-        <button (click)="editPost(posts.postId)" class="btn btn-primary" type="button">Edit Post</button>
+        <div class="btn-sm-group">
+        <button class="btn btn-danger" (click)="ngDeletePost(posts.postId)" >Delete Post</button>
+        <button (click)="viewPost(posts.postId)" class="btn btn-primary" type="button">View Post</button>
+          <button (click)="editPost(posts.postId)" class="btn btn-secondary" type="button">Edit Post</button>
         </div>
       </div>
       <div class="col-auto d-none d-lg-block">
-<!--        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
         <img src='{{"assets/images/" + posts.genre + ".png"}}'>
       </div>
 
-
-      <form [formGroup]="commentForm" (ngSubmit)="leaveComment(posts.postId)">
-        <div class=" p-4 d-flex flex-column position-static">
-          <textarea rows="3" formControlName="commentBody"></textarea>
-          <div class = " p-3 d-flex flex-column">
-            <button  class="btn btn-info " type="submit">LeaveComment</button>
-          </div>
-        </div>
-      </form>
-      {{filterComments(posts.postId)}}
-      <form *ngFor="let filteredComments of filteredComments" > <p>--- {{filteredComments.commentBody}}</p></form>
-
     </div>
   </div>
-</div>
 
+</div>
 </form>
 </main>
+
+

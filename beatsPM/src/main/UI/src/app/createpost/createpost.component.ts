@@ -31,6 +31,7 @@ export class CreatepostComponent implements OnInit {
       postTitle: '',
       postBody: '',
       genre: '',
+      youtubeLink: '',
       postId: 0,
     }
     };
@@ -41,6 +42,7 @@ export class CreatepostComponent implements OnInit {
     this.createPostForm = new FormGroup({
       postBody: new FormControl('',  Validators.required),
       postTitle: new FormControl('',  Validators.required),
+      youtubeLink: new FormControl('', Validators.required),
       genre: new FormControl('',  Validators.required),
     });
   };
@@ -48,6 +50,7 @@ export class CreatepostComponent implements OnInit {
   createPost() {
     this.postObject.postTitle = this.createPostForm.controls['postTitle'].value;
     this.postObject.postBody = this.createPostForm.controls['postBody'].value;
+    this.postObject.youtubeLink = this.extractYoutubeId(this.createPostForm.controls['youtubeLink'].value);
     this.postObject.genre = this.createPostForm.controls['genre'].value;
 
     this.api.createPost(this.postObject).subscribe((data) => {
@@ -61,10 +64,23 @@ export class CreatepostComponent implements OnInit {
     this.createPostForm = this.fb.group({
       postTitle: '',
       postBody: '',
+      youtubeLink: '',
       genre: '',
       });
     };
+ extractYoutubeId(url: string){
+    let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
 
+    let Id : string;
+    let match = url.match(regExp);
+
+    if(((match&&match[7].length==11)? match[7] : false)){
+    Id = match![7];
+    } else{
+    Id = "No Link"
+    }
+return Id;
+}
     get f() {
       return this.createPostForm.controls;
     };

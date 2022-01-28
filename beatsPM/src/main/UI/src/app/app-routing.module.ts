@@ -10,6 +10,7 @@ import { RapComponent } from './forum/rap/rap.component';
 import { MiscComponent } from './forum/misc/misc.component';
 import { ForumComponent } from './forum/forum.component';
 import { ResultsComponent } from './forum/results/results.component';
+import { ViewpostComponent } from './viewpost/viewpost.component'
 
 const routes: Routes = [
   {
@@ -63,6 +64,11 @@ const routes: Routes = [
       pathMatch: 'prefix',
       component: MiscComponent
     },
+   {
+       path: 'viewpost/:id',
+       pathMatch: 'prefix',
+       component: ViewpostComponent
+     },
 
 
 ];

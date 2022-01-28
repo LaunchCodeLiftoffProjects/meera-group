@@ -1,0 +1,73 @@
+<main class="container-fluid" >
+  <br>
+
+
+
+
+
+
+  <div class="row mb-2 justify-content-md-center">
+
+    <div class="col-md-9 align-self-center ">
+
+      <div class="row g-0 border rounded-3 overflow-hidden flex-md-row mb-3 shadow-lg h-md-250 position-relative">
+
+    <div class="col p-4 d-flex flex-column">
+
+
+      <div *ngIf = "post?.youtubeLink !== 'No Link'" class="ratio ratio-16x9 border rounded-3 overflow-hidden">
+        <iframe id="videoIframe" [src]="sanUrl" title="YouTube video" allowfullscreen></iframe>
+      </div>
+      <br>
+
+<h3 > {{ post?.postTitle }} </h3>
+    <p>{{ post?.postBody }}</p>
+    <p>{{ post?.genre }} </p>
+      <div class="btn-sm-group">
+        <button class="btn btn-danger" (click)="ngDeletePost(post.postId)" >Delete Post</button>
+
+        <button (click)="editPost(postId)" class="btn btn-secondary" type="button">Edit Post</button>
+      </div>
+
+    </div>
+  </div>
+    </div>
+  </div>
+
+
+      <div class="row mb-2 justify-content-md-center">
+        <div class="col-md-9 align-self-center ">
+          <div class="row g-0 border rounded-3 overflow-hidden flex-md-row mb-3 shadow-lg h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column">
+  <div class="row gy-2">
+    {{filterComments(postId)}}
+    <div *ngFor="let filteredComments of filteredComments" >
+      <H5 class="font-weight-bold">Commenter Name</H5>
+      <div class="border mb-3 rounded overflow-hidden shadow-sm">
+        <div class="col p-1">
+
+
+          <p class="card-text">{{filteredComments.commentBody}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <form [formGroup]="commentForm" (ngSubmit)="leaveComment(post.postId)">
+    <div class=" p-4 d-flex flex-column position-static">
+
+      <textarea class="form-control" rows="3" formControlName="commentBody" autocomplete="off"></textarea>
+      <div class = " p-3 d-flex flex-column">
+        <div class="btn-sm-group">
+        <button  class="btn btn-info " type="submit">Post Comment</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+  </div>
+  </div>
+</div>
+</main>

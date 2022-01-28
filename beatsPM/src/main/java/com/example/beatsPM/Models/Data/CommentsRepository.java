@@ -9,6 +9,7 @@ import javax.transaction.Transactional;
 
 @Repository
 @Transactional
-public interface CommentsRepository extends CrudRepository <CommentModel, Integer>{
+public interface CommentsRepository extends CrudRepository <CommentModel, Integer> {
+
 
 }
