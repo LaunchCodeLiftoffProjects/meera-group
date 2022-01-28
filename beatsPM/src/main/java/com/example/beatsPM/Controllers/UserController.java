@@ -4,7 +4,9 @@ import com.example.beatsPM.Models.Data.UserRepository;
 import com.example.beatsPM.Models.User;
 import com.example.beatsPM.Models.dto.LoginFormDTO;
 import com.example.beatsPM.Models.dto.RegisterFormDTO;
+import com.nimbusds.oauth2.sdk.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
@@ -43,7 +45,7 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public String processRegistrationForm(@ModelAttribute @Valid RegisterFormDTO registerFormDTO) {
+    public ResponseEntity<String> processRegistrationForm(@RequestBody RegisterFormDTO registerFormDTO) {
 
 
         User existingUser = userRepository.findByUsername(registerFormDTO.getUsername());
@@ -60,7 +62,7 @@ public class UserController {
         userRepository.save(newUser);
         setUserInSession(request.getSession(), newUser);
 
-        
+
     }
 
    @GetMapping("/login")
