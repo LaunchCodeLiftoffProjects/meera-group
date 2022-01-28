@@ -57,9 +57,10 @@ export class ApiService {
 //       console.log(commentObj);
         return this.http.post<any>('http://localhost:8080/comments/add', commentObj);
       }
-      
+
 
       loginUser(loginObj: LoginObject): Observable<any>{
         return this.http.get('http://localhost/8080/login')
       }
+
 }
