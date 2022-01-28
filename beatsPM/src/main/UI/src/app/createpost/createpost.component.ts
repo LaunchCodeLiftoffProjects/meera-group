@@ -5,6 +5,7 @@ import { Observable, throwError, } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { PostObject } from './PostObject';
+import { ApiService } from '../shared/api.service';
 
 
 @Component({
