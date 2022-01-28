@@ -11,6 +11,13 @@ export class AuthService {
 
 constructor(private http: HttpClient){}
 
+  addUser(registerObject: RegisterObject, ) {
+      // throw new Error('Method not implemented.');
+      return this.http.post('http://localhost:8080/register', registerObject)
+    }
 
+  loginUser(loginObj: LoginObject): Observable<any>{
+          return this.http.get('http://localhost/8080/login')
+        }
 
 }

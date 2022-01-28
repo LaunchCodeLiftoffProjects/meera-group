@@ -8,10 +8,10 @@ import { LoginObject } from '../login/LoginObject';
 
 @Injectable({providedIn:'root'})
 export class ApiService {
-  addUser(registerObject: RegisterObject, ) {
-    // throw new Error('Method not implemented.');
-    return this.http.post('http://localhost:8080/register', registerObject)
-  }
+//   addUser(registerObject: RegisterObject, ) {
+//     // throw new Error('Method not implemented.');
+//     return this.http.post('http://localhost:8080/register', registerObject)
+//   }
     status: any;
 
     constructor(private http: HttpClient){}
@@ -59,8 +59,8 @@ export class ApiService {
       }
 
 
-      loginUser(loginObj: LoginObject): Observable<any>{
-        return this.http.get('http://localhost/8080/login')
-      }
+//       loginUser(loginObj: LoginObject): Observable<any>{
+//         return this.http.get('http://localhost/8080/login')
+//       }
 
 }
