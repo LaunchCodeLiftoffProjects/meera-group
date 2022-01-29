@@ -43,14 +43,14 @@ export class CreatepostComponent implements OnInit {
       postBody: new FormControl('',  Validators.required),
       postTitle: new FormControl('',  Validators.required),
       youtubeLink: new FormControl('', Validators.required),
-      genre: new FormControl('',  Validators.required),
+      genre: new FormControl('MISC',  Validators.required),
     });
   };
   //function to create the post using form values in localhost:4200/createpost
   createPost() {
     this.postObject.postTitle = this.createPostForm.controls['postTitle'].value;
     this.postObject.postBody = this.createPostForm.controls['postBody'].value;
-    this.postObject.youtubeLink = this.extractYoutubeId(this.createPostForm.controls['youtubeLink'].value);
+    this.postObject.youtubeLink = 'https://www.youtube.com/embed/'+ this.extractYoutubeId(this.createPostForm.controls['youtubeLink'].value);
     this.postObject.genre = this.createPostForm.controls['genre'].value;
 
     this.api.createPost(this.postObject).subscribe((data) => {

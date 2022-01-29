@@ -81,9 +81,10 @@ export class ViewpostComponent implements OnInit {
 
 
       getYoutubeURL(id: string){
-      return this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/"+id);
+      return this.sanitizer.bypassSecurityTrustResourceUrl(id);
       }
 
+// "https://www.youtube.com/embed/"+
 
   leaveComment(postId: number){
  //   console.log(postId);
