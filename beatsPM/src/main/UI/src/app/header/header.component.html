@@ -1,11 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">BeatsPM</a>
+<!--    <div class="container-fluid">-->
+      <a class="navbar-brand mx-3" href="#">BeatsPM</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+
+
+
+      <div class="collapse navbar-collapse px-3" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="createpost">Create a Post</a>
           </li>
@@ -15,15 +18,29 @@
           <li class="nav-item">
             <a class="nav-link" href="forum">Music Forum</a>
           </li>
-          <li>
-          <form [formGroup]="createSearch" (ngSubmit)="onSubmit()">
-            <label>
-              <input type="text" placeholder="search posts" formControlName="searchText">
-              <button class="button" type="submit">Submit</button>
-            </label>
-          </form>
-          </li>
         </ul>
-      </div>
+
+
+
+
+<!--      </div>-->
+
+
     </div>
+
+    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+      <div class="mx-3">
+    <form class="form-inline my-2 my-lg-0" [formGroup]="createSearch" (ngSubmit)="onSubmit()">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <input class="form-control mr-sm-2" type="text" placeholder="search posts" formControlName="searchText">
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-outline-success mx-2 my-sm-0" type="submit">Submit</button>
+        </li>
+      </ul>
+    </form>
+    </div>
+  </div>
+
   </nav>
