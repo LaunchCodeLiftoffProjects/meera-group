@@ -29,6 +29,17 @@
     </div>
 
     <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+
+
+      <div class = "mx-3">
+        <a class="btn btn-outline-secondary mx-1" routerLinkActive="active"
+           routerLinkActive="active" routerLink="/sign-up">Sign up</a>
+        <a class="btn btn-outline-primary mx-1" routerLinkActive="active" routerLink="/log-in">Sign
+          in</a>
+        <button  type="button" class="btn btn-danger mx-1">Logout</button>
+      </div>
+
+
       <div class="mx-3">
     <form class="form-inline my-2 my-lg-0" [formGroup]="createSearch" (ngSubmit)="onSubmit()">
       <ul class="navbar-nav mr-auto">
@@ -41,6 +52,9 @@
       </ul>
     </form>
     </div>
+
   </div>
+
+
 
   </nav>
