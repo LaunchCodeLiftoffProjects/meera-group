@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { AuthService } from '../shared/auth/auth.service';
 import { Router } from '@angular/router';
+import { SignUp } from '../shared/auth/signup';
 
 @Component({
   selector: 'app-signup',
@@ -10,6 +11,11 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
   signupForm: FormGroup;
+  signUp: SignUp = {
+    username: '',
+    password: '',
+    email: ''
+  }
 
   constructor(
     public fb: FormBuilder,
@@ -18,15 +24,18 @@ export class SignupComponent implements OnInit {
   ) {
     this.signupForm = this.fb.group({
       username: [''],
-      email: [''],
-      password: ['']
+      password: [''],
+      email: ['']
     })
   }
 
   ngOnInit() { }
 
   registerUser() {
-    this.authService.signUp(this.signupForm.value).subscribe((res) => {
+    this.signUp.username = this.signupForm.controls['username'].value;
+    this.signUp.password = this.signupForm.controls['password'].value;
+    this.signUp.email = this.signupForm.controls['email'].value;
+    this.authService.signUp(this.signUp).subscribe((res) => {
       if (res.result) {
         this.signupForm.reset()
         this.router.navigateByUrl('/');

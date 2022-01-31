@@ -3,6 +3,9 @@ package com.example.beatsPM.payload.request;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.lang.reflect.Array;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.Set;
 
 public class SignupRequest {
@@ -15,8 +18,14 @@ public class SignupRequest {
     @Email
     private String email;
 
-    private Set<String> role;
+    private Set<String> role = getRole();
 
+    public static <String> Set<String> convertArrayToSet( String[] array )
+    {
+        Set<String> hash_Set = new HashSet<String>();
+        Collections.addAll(hash_Set, array);
+        return hash_Set;
+    }
     @NotBlank
     @Size(min = 6, max = 40)
     private String password;
@@ -46,7 +55,7 @@ public class SignupRequest {
     }
 
     public Set<String> getRole() {
-        return this.role;
+        return role;
     }
 
     public void setRole(Set<String> role) {

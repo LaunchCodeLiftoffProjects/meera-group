@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from '../user';
+import { SignUp } from './signup';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
@@ -15,15 +16,15 @@ export class AuthService {
 
   constructor(private http: HttpClient, public router: Router) { }
 
-  signUp(user:User): Observable<any>{
-    return this.http.post('http://localhost:8080/signup', user)
+  signUp(signUp:SignUp): Observable<any>{
+    return this.http.post('http://localhost:8080/api/auth/signup', signUp)
         .pipe(
           catchError(this.handleError)
         )
   }
   //haha
   signIn(user:User){
-    return this.http.post<any>(`http://localhost:8080/signin`, user)
+    return this.http.post<any>(`http://localhost:8080/api/auth/signin`, user)
           .subscribe((res: any) => {
             localStorage.setItem('access_token', res.token)
             this.getUserProfile(res.id).subscribe((res) => {
