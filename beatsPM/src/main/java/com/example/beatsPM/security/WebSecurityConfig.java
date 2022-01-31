@@ -1,5 +1,8 @@
-package com.example.beatsPM.security.services;
+package com.example.beatsPM.security;
 
+import com.example.beatsPM.security.jwt.AuthEntryPointJwt;
+import com.example.beatsPM.security.jwt.AuthTokenFilter;
+import com.example.beatsPM.security.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
