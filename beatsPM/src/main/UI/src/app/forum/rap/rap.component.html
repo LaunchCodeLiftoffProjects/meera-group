@@ -13,9 +13,9 @@
               <h3 class="mb-0">{{ posts.postTitle }}</h3>
               <p class="card-text mb-auto">{{ posts.postBody }}</p>
               <div class="btn-sm-group">
-                <button class="btn btn-danger" (click)="ngDeletePost(posts.postId)" >Delete Post</button>
-                                <button (click)="viewPost(posts.postId)" class="btn btn-primary" type="button">View Post</button>
-                <button (click)="editPost(posts.postId)" class="btn btn-secondary" type="button">Edit Post</button>
+                <button class="btn btn-danger mx-1" (click)="ngDeletePost(posts.postId)" >Delete Post</button>
+                <button (click)="viewPost(posts.postId)" class="btn btn-primary mx-1" type="button">View Post</button>
+                <button (click)="editPost(posts.postId)" class="btn btn-secondary mx-1" type="button">Edit Post</button>
               </div>
             </div>
             <div class="col-auto d-none d-lg-block">
