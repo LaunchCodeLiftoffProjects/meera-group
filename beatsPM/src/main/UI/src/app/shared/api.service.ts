@@ -2,10 +2,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PostObject } from '../createpost/PostObject';
-import { CommentObj } from '../comment/commentObj'
+import { CommentObj } from '../comment/CommentObj';
+import { RegisterObject } from '../register/RegisterObject';
+import { LoginObject } from '../login/LoginObject';
 
 @Injectable({providedIn:'root'})
 export class ApiService {
+//   addUser(registerObject: RegisterObject, ) {
+//     // throw new Error('Method not implemented.');
+//     return this.http.post('http://localhost:8080/register', registerObject)
+//   }
     status: any;
 
     constructor(private http: HttpClient){}
@@ -20,20 +26,12 @@ export class ApiService {
         return this.http.get<Array<PostObject>>('http://localhost:8080/forum');
       }
 
-   //http method for gettting posts by post id
-    getPostById(Id:number): Observable<PostObject>{
-       console.log("api get post");
-    return this.http.get<PostObject>('http://localhost:8080/viewpost/'+ Id)
-
-
-    }
-
     //http delete method to delete a post sent to backend
-     deletePost(Id: number): string{
+     deletePost(Id: number): void{
         console.log("this is the apiservice checker");
         console.log(Id);
-       this.http.delete('http://localhost:8080/delete/' + Id).subscribe(() => this.status = 'Delete successful');
-      return this.status;
+        this.http.delete('http://localhost:8080/forum/' + Id).subscribe(() => this.status = 'Delete successful');
+        console.log('it was maybe deleted?')
      }
 
     //http put method to edit post data using the postID
@@ -53,10 +51,6 @@ export class ApiService {
         return this.http.get<CommentObj[]>('http://localhost:8080/comments');
       }
 
-//       getCommentsByPostId(Id: number):Observable<CommentObj[]>{
-//       return this.http.get<CommentObj[]>('http://localhost:8080/viewcomments/'+ Id)
-//       }
-
 
       postComment(commentObj: CommentObj): Observable<any> {
 //       console.log('this is the comment Api service')
@@ -64,5 +58,9 @@ export class ApiService {
         return this.http.post<any>('http://localhost:8080/comments/add', commentObj);
       }
 
+
+//       loginUser(loginObj: LoginObject): Observable<any>{
+//         return this.http.get('http://localhost/8080/login')
+//       }
 
 }

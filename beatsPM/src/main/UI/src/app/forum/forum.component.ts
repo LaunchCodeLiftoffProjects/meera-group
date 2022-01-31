@@ -5,7 +5,7 @@ import { ApiService } from '../shared/api.service';
 import { DataShareService } from '../shared/datashare.service';
 import { Observable, throwError, } from 'rxjs';
 import { Router} from '@angular/router';
-import { CommentObj } from '../comment/commentObj'
+import { CommentObj } from '../comment/CommentObj'
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({

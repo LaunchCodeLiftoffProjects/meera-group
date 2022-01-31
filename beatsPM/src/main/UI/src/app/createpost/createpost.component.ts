@@ -3,9 +3,9 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError, } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { ApiService } from '../shared/api.service'
 import { Router } from '@angular/router';
 import { PostObject } from './PostObject';
+import { ApiService } from '../shared/api.service';
 
 
 @Component({
@@ -53,9 +53,9 @@ export class CreatepostComponent implements OnInit {
     this.postObject.youtubeLink = this.extractYoutubeId(this.createPostForm.controls['youtubeLink'].value);
     this.postObject.genre = this.createPostForm.controls['genre'].value;
 
-    this.api.createPost(this.postObject).subscribe((data) => {
+    this.api.createPost(this.postObject).subscribe((data: any) => {
       this.router.navigateByUrl('/forum');
-    }, error => {
+    }, (error: any) => {
       throwError(error);
     })
   }

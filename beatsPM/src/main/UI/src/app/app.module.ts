@@ -13,15 +13,11 @@ import { JazzComponent } from './forum/jazz/jazz.component';
 import { FooterComponent } from './footer/footer.component';
 import { MiscComponent } from './forum/misc/misc.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { EditpostComponent } from './editpost/editpost.component';
 import { ResultsComponent } from './forum/results/results.component';
-import { ViewpostComponent } from './viewpost/viewpost.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from './shared/auth/authconfig.interceptor';
-import { SignupComponent } from './signup/signup.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { SigninComponent } from './signin/signin.component';
-
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -38,10 +34,8 @@ import { SigninComponent } from './signin/signin.component';
     MiscComponent,
     EditpostComponent,
     ResultsComponent,
-    ViewpostComponent,
-    SignupComponent,
-    UserProfileComponent,
-    SigninComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -50,13 +44,7 @@ import { SigninComponent } from './signin/signin.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [
-    {
-    provide: HTTP_INTERCEPTORS,
-    useClass: AuthInterceptor,
-    multi: true
-    }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
