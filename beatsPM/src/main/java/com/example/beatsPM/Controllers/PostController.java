@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @Controller
 public class PostController {
 

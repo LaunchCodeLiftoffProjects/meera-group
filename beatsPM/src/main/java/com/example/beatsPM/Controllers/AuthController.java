@@ -123,4 +123,12 @@ public class AuthController {
 
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }
+
+    @GetMapping("/users/{id}")
+    public ResponseEntity<User> getUserById(
+            @PathVariable(value = "id") Long userId) throws Exception {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new Exception("User not found :: " + userId));
+        return ResponseEntity.ok().body(user);
+    }
 }

@@ -29,9 +29,9 @@ const routes: Routes = [
         component: SignupComponent
       },
   {
-        path: 'userprofile',
-        pathMatch: 'full',
-        component: UserProfileComponent
+        path: 'userprofile/:id',
+        component: UserProfileComponent,
+        canActivate: [AuthGuard]
       },
   {
       path: '',
@@ -98,9 +98,7 @@ const routes: Routes = [
        pathMatch: 'prefix',
        component: ViewpostComponent,
        canActivate: [AuthGuard]
-     },
-
-
+     }
 ];
 
 @NgModule({

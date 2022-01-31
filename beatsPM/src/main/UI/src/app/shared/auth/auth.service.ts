@@ -53,7 +53,7 @@ export class AuthService {
   }
 
   getUserProfile(id: String | null): Observable<any> {
-      let api = `http://localhost:8080/user/${id}`;
+      let api = `http://localhost:8080/users/${id}`;
       return this.http.get(api, { headers: this.headers }).pipe(
         map((res: any) => {
           return res || {}
