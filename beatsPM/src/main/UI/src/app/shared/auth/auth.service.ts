@@ -15,14 +15,14 @@ export class AuthService {
 
   constructor(private http: HttpClient, public router: Router) { }
 
-  signUp(user:User) {
+  signUp(user:User): Observable<any>{
     return this.http.post('http://localhost:8080/signup', user)
         .pipe(
           catchError(this.handleError)
         )
   }
 
-  signIn(user:User) {
+  signIn(user:User){
     return this.http.post<any>(`http://localhost:8080/signin`, user)
           .subscribe((res: any) => {
             localStorage.setItem('access_token', res.token)
@@ -50,7 +50,7 @@ export class AuthService {
       }
   }
 
-  getUserProfile(id: String): Observable<any> {
+  getUserProfile(id: String | null): Observable<any> {
       let api = `http://localhost:8080/user/${id}`;
       return this.http.get(api, { headers: this.headers }).pipe(
         map((res: any) => {
