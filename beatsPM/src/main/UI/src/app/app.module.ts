@@ -16,8 +16,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EditpostComponent } from './editpost/editpost.component';
 import { ResultsComponent } from './forum/results/results.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component'
+import { ViewpostComponent } from './viewpost/viewpost.component'
 
 @NgModule({
   declarations: [
@@ -34,8 +35,9 @@ import { RegisterComponent } from './register/register.component';
     MiscComponent,
     EditpostComponent,
     ResultsComponent,
-    LoginComponent,
-    RegisterComponent
+    SigninComponent,
+    SignupComponent,
+    ViewpostComponent
   ],
   imports: [
     BrowserModule,

@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { PostObject } from '../createpost/PostObject';
 import { ApiService } from '../shared/api.service';
 import { Observable, throwError, } from 'rxjs';
-import { CommentObj } from '../comment/commentObj'
-import { FormBuilder, FormGroup, FormControl, Validators, } from '@angular/forms';
+import { CommentObj } from '../comment/CommentObj'
+import { FormBuilder, FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 

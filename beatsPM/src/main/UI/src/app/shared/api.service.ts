@@ -3,8 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PostObject } from '../createpost/PostObject';
 import { CommentObj } from '../comment/CommentObj';
-import { RegisterObject } from '../register/RegisterObject';
-import { LoginObject } from '../login/LoginObject';
+
 
 @Injectable({providedIn:'root'})
 export class ApiService {
@@ -58,6 +57,10 @@ export class ApiService {
         return this.http.post<any>('http://localhost:8080/comments/add', commentObj);
       }
 
+      getPostById(Id:number): Observable<PostObject>{
+             console.log("api get post");
+          return this.http.get<PostObject>('http://localhost:8080/viewpost/'+ Id)
+          }
 
 //       loginUser(loginObj: LoginObject): Observable<any>{
 //         return this.http.get('http://localhost/8080/login')
