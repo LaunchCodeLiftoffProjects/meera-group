@@ -36,10 +36,14 @@ export class SignupComponent implements OnInit {
     this.signUp.password = this.signupForm.controls['password'].value;
     this.signUp.email = this.signupForm.controls['email'].value;
     this.authService.signUp(this.signUp).subscribe((res) => {
-      if (res.result) {
+      console.log(res.message);
+      if (res.message === "User registered successfully!") {
+        console.log(res)
         this.signupForm.reset()
-        this.router.navigateByUrl('/');
-      }
-    })
-  }
+        this.router.navigateByUrl('');
+        alert('You have successfully registered. Please log in with provided information with the button at the top right.');
+        }
+      });
+      alert('Something went wrong, please try again.');
+    }
 }
