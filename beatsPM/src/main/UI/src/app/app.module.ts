@@ -18,6 +18,9 @@ import { ResultsComponent } from './forum/results/results.component';
 import { ViewpostComponent } from './viewpost/viewpost.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './shared/auth/authconfig.interceptor';
+import { SignupComponent } from './signup/signup.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 @NgModule({
@@ -36,7 +39,9 @@ import { AuthInterceptor } from './shared/auth/authconfig.interceptor';
     EditpostComponent,
     ResultsComponent,
     ViewpostComponent,
-
+    SignupComponent,
+    UserProfileComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
