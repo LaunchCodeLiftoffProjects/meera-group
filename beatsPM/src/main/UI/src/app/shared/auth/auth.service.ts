@@ -48,6 +48,7 @@ export class AuthService {
       if(removeToken == null) {
       // this.router.navigateByUrl()
       }
+      console.log('this is within logout function in authservice');
   }
 
   getUserProfile(id: String | null): Observable<any> {

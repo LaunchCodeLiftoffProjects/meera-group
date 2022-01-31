@@ -10,7 +10,7 @@
             <a class="nav-link" href="createpost">Create a Post</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">User Profile</a>
+            <a class="nav-link" *ngIf="this.authService.isLoggedIn" href="#">User Profile</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="forum">Music Forum</a>
@@ -22,7 +22,15 @@
               <button class="button" type="submit">Submit</button>
             </label>
           </form>
-
+          </li>
+          <li>
+            <div>
+            <a *ngIf="!this.authService.isLoggedIn" class="p-2 text-dark" routerLinkActive="active" routerLink="/signin">Sign
+              in</a>
+            <a *ngIf="!this.authService.isLoggedIn" class="btn btn-outline-primary" routerLinkActive="active"
+               routerLinkActive="active" routerLink="/signup">Sign up</a>
+            <button (click)="this.authService.logout()" *ngIf="this.authService.isLoggedIn" type="button" class="btn btn-danger">Logout</button>
+            </div>
           </li>
         </ul>
       </div>

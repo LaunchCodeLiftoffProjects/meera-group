@@ -12,9 +12,27 @@ import { ForumComponent } from './forum/forum.component';
 import { ResultsComponent } from './forum/results/results.component';
 import { ViewpostComponent } from './viewpost/viewpost.component';
 import { AuthGuard } from './shared/auth/auth.guard';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 const routes: Routes = [
+   {
+         path: 'signin',
+         pathMatch: 'full',
+         component: SigninComponent
+       },
+  {
+        path: 'signup',
+        pathMatch: 'full',
+        component: SignupComponent
+      },
+  {
+        path: 'userprofile',
+        pathMatch: 'full',
+        component: UserProfileComponent
+      },
   {
       path: '',
       pathMatch: 'full',
