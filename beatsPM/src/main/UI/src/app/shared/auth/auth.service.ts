@@ -31,7 +31,9 @@ export class AuthService {
               this.currentUser = res;
               this.router.navigate(['/']);
             })
+            this.router.navigate(['/']);
           })
+
   }
 
 
@@ -49,6 +51,7 @@ export class AuthService {
       if(removeToken == null) {
       // this.router.navigateByUrl()
       }
+      this.router.navigate(['/']);
       console.log('this is within logout function in authservice');
   }
 

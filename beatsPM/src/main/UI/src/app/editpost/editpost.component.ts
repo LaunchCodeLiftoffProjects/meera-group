@@ -75,7 +75,7 @@ constructor(
 
       this.api.editPost(this.postObject,this.postId).subscribe((data) => {
       console.log(this.id)
-        this.router.navigateByUrl('/forum');
+        this.router.navigateByUrl('/viewpost/'+ this.postId);
       }, error => {
         throwError(error);
       })

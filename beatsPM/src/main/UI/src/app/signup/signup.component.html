@@ -1,18 +1,32 @@
+
+<div class="container-fluid">
+  <div class="row py-5 mb-2 justify-content-md-center">
+    <div class="col-md-3 align-self-center ">
+      <br>
+      <div class="row g-0 border rounded-3 overflow-hidden flex-md-row shadow-lg h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column">
 <div class="auth-wrapper">
   <form class="form-signin" [formGroup]="signupForm" (ngSubmit)="registerUser()">
     <h3 class="h3 mb-3 font-weight-normal text-center">Please sign up</h3>
     <div class="form-group">
       <label>Name</label>
-      <input type="text" class="form-control" formControlName="username" placeholder="Enter name" required>
+      <input type="text" class="form-control" formControlName="username"  required>
     </div>
     <div class="form-group">
       <label>Email address</label>
-      <input type="email" class="form-control" formControlName="email" placeholder="Enter email" required>
+      <input type="email" class="form-control" formControlName="email" required>
     </div>
     <div class="form-group">
       <label>Password</label>
-      <input type="password" class="form-control" formControlName="password" placeholder="Password" required>
+      <input type="password" class="form-control" formControlName="password"  required>
     </div>
+    <div class="d-grid p-3 gap-2 d-md-flex justify-content-md-end">
     <button type="submit" class="btn btn-block btn-primary">Sign up</button>
+    </div>
   </form>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

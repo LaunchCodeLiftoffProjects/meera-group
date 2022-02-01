@@ -80,8 +80,8 @@ export class ViewpostComponent implements OnInit {
       }
 
 
-      getYoutubeURL(id: string){
-      return this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/"+id);
+      getYoutubeURL(videoId: string){
+      return this.sanitizer.bypassSecurityTrustResourceUrl(videoId);
       }
 
 

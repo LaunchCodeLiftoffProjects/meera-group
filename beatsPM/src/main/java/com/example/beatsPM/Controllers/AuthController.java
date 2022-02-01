@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api/auth/")
 public class AuthController {
     @Autowired
     AuthenticationManager authenticationManager;
@@ -123,6 +123,8 @@ public class AuthController {
 
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }
+
+
 
     @GetMapping("/users/{id}")
     public ResponseEntity<User> getUserById(

@@ -32,9 +32,9 @@
 
 
     <div class = "mx-3">
-      <a class="btn btn-outline-secondary mx-1" routerLinkActive="active"
+      <a class="btn btn-outline-secondary mx-1" routerLinkActive="active" *ngIf="this.authService.isLoggedIn === false"
          routerLinkActive="active" routerLink="/signup">Sign up</a>
-      <a class="btn btn-outline-primary mx-1" routerLinkActive="active" routerLink="/signin">Sign
+      <a class="btn btn-outline-primary mx-1" routerLinkActive="active" routerLink="/signin" *ngIf="this.authService.isLoggedIn === false" >Sign
         in</a>
       <button (click)="this.authService.logout()" *ngIf="this.authService.isLoggedIn" type="button" class="btn btn-danger mx-1">Logout</button>
     </div>
