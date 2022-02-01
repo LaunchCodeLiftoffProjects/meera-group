@@ -40,10 +40,12 @@ export class SignupComponent implements OnInit {
       if (res.message === "User registered successfully!") {
         console.log(res)
         this.signupForm.reset()
-        this.router.navigateByUrl('');
+        this.router.navigateByUrl('/signin');
         alert('You have successfully registered. Please log in with provided information with the button at the top right.');
-        }
+        } else {
+         alert('Something went wrong, please try again.');
+         }
       });
-      alert('Something went wrong, please try again.');
+
     }
 }
