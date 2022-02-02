@@ -24,12 +24,15 @@ export class AuthService {
   }
   //haha
   signIn(user:User){
+
     return this.http.post<any>(`http://localhost:8080/api/auth/signin`, user)
           .subscribe((res: any) => {
             localStorage.setItem('access_token', res.token)
+            localStorage.setItem('username', res.username)
             this.getUserProfile(res.id).subscribe((res) => {
               this.currentUser = res;
               this.router.navigate(['/']);
+//                console.log(localStorage.getItem('username'));
             })
             this.router.navigate(['/']);
           })
@@ -56,7 +59,7 @@ export class AuthService {
   }
 
   getUserProfile(id: String | null): Observable<any> {
-      let api = `http://localhost:8080/users/${id}`;
+      let api = `http://localhost:8080/api/auth/users/${id}`;
       return this.http.get(api, { headers: this.headers }).pipe(
         map((res: any) => {
           return res || {}

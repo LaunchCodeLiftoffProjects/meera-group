@@ -5,7 +5,7 @@ import { Observable, throwError, } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ApiService } from '../shared/api.service'
 import { Router } from '@angular/router';
-import { PostObject } from './PostObject';
+import { PostObject } from '../createpost/PostObject';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -22,6 +22,7 @@ export class EditpostComponent implements OnInit {
   posts: Array<PostObject> = [];
   id: number;
   postId: number;
+ username!: string | null;
 
 
 constructor(
@@ -32,7 +33,7 @@ constructor(
     private route: ActivatedRoute
   ) {
      this.id = route.snapshot.params.id;
-    this.postId =route.snapshot.params.id;
+    this.postId = route.snapshot.params.id;
 
     this.postObject = {
       postTitle: '',
@@ -40,6 +41,7 @@ constructor(
       youtubeLink: '',
       genre: '',
       postId: 0,
+      username:'',
     }
     };
 
@@ -51,8 +53,10 @@ constructor(
 
           console.log(this.id)
           console.log(this.posts[i].postId)
+
           if(this.posts[i].postId==this.id){
           this.id = i
+
           console.log(this.id)
           break
           }
@@ -65,6 +69,8 @@ constructor(
       genre: new FormControl(this.posts[this.id].genre,  Validators.required),
       });
     });
+
+   this.username = localStorage.getItem('username');
   };
     //function used to edit the post by grabbing post data and editing the post using postid
     editPost() {
@@ -72,6 +78,7 @@ constructor(
       this.postObject.postBody = this.editPostForm.controls['postBody'].value;
       this.postObject.youtubeLink = this.editPostForm.controls['youtubeLink'].value;
       this.postObject.genre = this.editPostForm.controls['genre'].value;
+      this.postObject.username =  localStorage.getItem('username');
 
       this.api.editPost(this.postObject,this.postId).subscribe((data) => {
       console.log(this.id)

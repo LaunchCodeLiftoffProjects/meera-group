@@ -125,7 +125,7 @@ public class AuthController {
     }
 
 
-
+    @CrossOrigin("*")
     @GetMapping("/users/{id}")
     public ResponseEntity<User> getUserById(
             @PathVariable(value = "id") Long userId) throws Exception {
