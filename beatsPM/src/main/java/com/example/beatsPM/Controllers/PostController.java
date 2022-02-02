@@ -74,7 +74,7 @@ public class PostController {
 
         //controller used to delete a post from the database
         @CrossOrigin(origins = "*")
-        @DeleteMapping(value = "/delete/{id}")
+        @DeleteMapping(value = "/forum/{id}")
         public ResponseEntity<Long> deletePost(@PathVariable int id) {
                 postRepository.deleteById(id);
                 return new ResponseEntity<Long>(HttpStatus.OK);
