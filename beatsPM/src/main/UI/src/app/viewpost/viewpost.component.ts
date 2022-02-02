@@ -27,6 +27,7 @@ export class ViewpostComponent implements OnInit {
   filteredComments:Array<CommentObj> = [];
   commentForm!: FormGroup;
   commentObj!: CommentObj;
+  loggedinUsername!: string | null
 
 
 
@@ -63,7 +64,7 @@ export class ViewpostComponent implements OnInit {
         commentBody: new FormControl('',  Validators.required),
 
       });
-
+this.loggedinUsername = localStorage.getItem('username')
   }
 
     reloadCurrentPage() {
@@ -109,6 +110,12 @@ export class ViewpostComponent implements OnInit {
      this.filteredComments.push(this.comments[i]);
    }
    }
+   }
+
+   deleteComment(commentId: number){
+this.apiService.deleteComment(commentId);
+//  this.reloadCurrentPage();
+
    }
 
  initializeForm(): void {

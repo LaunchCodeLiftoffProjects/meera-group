@@ -20,6 +20,7 @@ export class ForumComponent implements OnInit {
   filteredComments:Array<CommentObj> = [];
   commentForm!: FormGroup;
   commentObj!: CommentObj;
+  loggedinUsername!: String | null;
 
 
 
@@ -42,6 +43,8 @@ export class ForumComponent implements OnInit {
         commentBody: new FormControl('',  Validators.required),
 
       });
+
+    this.loggedinUsername = localStorage.getItem('username')
   }
 
   reloadCurrentPage() {
@@ -49,7 +52,7 @@ export class ForumComponent implements OnInit {
      }
 
   ngDeletePost(postId: number) {
-      console.log(this.apiService.deletePost(postId));
+      this.apiService.deletePost(postId);
       this.reloadCurrentPage();
   }
 

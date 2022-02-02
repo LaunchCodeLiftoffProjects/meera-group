@@ -27,9 +27,9 @@
         <h6 class="mb-0">post by: {{ posts.username }}</h6>
       </div>
         <div class="btn-sm-group">
-        <button class="btn btn-danger" (click)="ngDeletePost(posts.postId)" >Delete Post</button>
-        <button (click)="viewPost(posts.postId)" class="btn btn-primary" type="button">View Post</button>
-          <button (click)="editPost(posts.postId)" class="btn btn-secondary" type="button">Edit Post</button>
+        <button class="btn btn-danger mx-1" (click)="ngDeletePost(posts.postId)"  *ngIf="posts.username === this.loggedinUsername">Delete Post</button>
+        <button (click)="viewPost(posts.postId)" class="btn btn-primary mx-1" type="button">View Post</button>
+          <button (click)="editPost(posts.postId)" class="btn btn-secondary mx-1" type="button" *ngIf="posts.username === this.loggedinUsername">Edit Post</button>
         </div>
       </div>
       <div class="col-auto d-none d-lg-block">
