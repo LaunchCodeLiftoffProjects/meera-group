@@ -30,6 +30,7 @@ export class ViewpostComponent implements OnInit {
 
 
 
+
   constructor( public sanitizer: DomSanitizer, private apiService: ApiService,  private router: Router,private route: ActivatedRoute, private fb: FormBuilder ) {
     this.postId = route.snapshot.params.id;
 
@@ -48,6 +49,7 @@ export class ViewpostComponent implements OnInit {
         commentBody:'',
         postId: 0,
         commentId:0,
+        username:'',
         }
 
 
@@ -89,6 +91,7 @@ export class ViewpostComponent implements OnInit {
  //   console.log(postId);
    this.commentObj.postId = postId;
    this.commentObj.commentBody = this.commentForm.controls['commentBody'].value;
+   this.commentObj.username = localStorage.getItem('username');
 
    this.apiService.postComment(this.commentObj).subscribe((data)=>{
    this.reloadCurrentPage();

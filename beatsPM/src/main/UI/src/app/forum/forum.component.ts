@@ -31,6 +31,7 @@ export class ForumComponent implements OnInit {
     commentBody:'',
     postId: 0,
     commentId:0,
+    username:'',
     }
   }
 

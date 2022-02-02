@@ -45,10 +45,9 @@
   <div class="row gy-2">
     {{filterComments(postId)}}
     <div *ngFor="let filteredComments of filteredComments" >
-      <H5 class="font-weight-bold">Commenter Name</H5>
+      <H5 class="font-weight-bold">{{filteredComments.username}}</H5>
       <div class="border mb-3 rounded overflow-hidden shadow-sm">
         <div class="col p-1">
-
 
           <p class="card-text">{{filteredComments.commentBody}}</p>
         </div>
