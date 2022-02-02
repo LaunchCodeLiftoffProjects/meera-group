@@ -17,7 +17,7 @@ public class CommentModel {
 //    @ManyToOne(fetch = LAZY)
 //    @JoinColumn(name = "postId", referencedColumnName = "postId")
     @NotNull
-    private Integer postId;
+    private Long postId;
 
 
     @GeneratedValue
@@ -39,11 +39,11 @@ public class CommentModel {
         this.commentBody = commentBody;
     }
 
-    public int getPostId() {
+    public Long getPostId() {
         return postId;
     }
 
-    public void setPostId(int postId) {
+    public void setPostId(Long postId) {
         this.postId = postId;
     }
 

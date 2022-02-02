@@ -113,8 +113,10 @@ this.loggedinUsername = localStorage.getItem('username')
    }
 
    deleteComment(commentId: number){
-this.apiService.deleteComment(commentId);
-//  this.reloadCurrentPage();
+      this.apiService.deleteComment(commentId);
+      setTimeout(() => {
+                  window.location.reload();
+                  }, 500);
 
    }
 

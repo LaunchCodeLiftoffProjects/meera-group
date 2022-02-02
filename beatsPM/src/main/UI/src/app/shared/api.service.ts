@@ -56,9 +56,11 @@ export class ApiService {
 //       console.log(commentObj);
         return this.http.post<any>('http://localhost:8080/comments/add', commentObj);
       }
-      deleteComment(Id: number){
 
-      this.http.delete('http://localhost:8080/comment_delete/' + Id).subscribe()
+
+      deleteComment(Id: number){
+          this.http.delete('http://localhost:8080/comment_delete/' + Id).subscribe(() =>
+          console.log('Post Deleted!'));
       }
 
 

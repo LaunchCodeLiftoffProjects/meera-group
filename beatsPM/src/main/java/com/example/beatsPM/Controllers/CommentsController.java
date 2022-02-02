@@ -33,12 +33,14 @@ public class CommentsController {
         commentsRepository.save(commentModel);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
-    @CrossOrigin(origins = "*")
-    @PostMapping("/comment_delete/{id}")
 
-    public ResponseEntity<Long> deleteComment(@PathVariable int id) {
-        commentsRepository.deleteById(id);
-        return new ResponseEntity<Long>(HttpStatus.OK);
+
+    @CrossOrigin(origins = "*")
+    @DeleteMapping("/comment_delete/{id}")
+    public ResponseEntity<Long> deleteComment(@PathVariable Long id) {
+            commentsRepository.deleteById(id);
+            System.out.println("deleted?");
+            return new ResponseEntity<Long>(HttpStatus.OK);
     };
 
 
