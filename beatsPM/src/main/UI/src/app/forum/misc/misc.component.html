@@ -18,18 +18,23 @@
   <h3 class="text-center"> Welcome to the Miscellaneous Forum</h3>
   <form *ngFor="let posts of postsGenre" (ngSubmit)="ngDeletePost(posts.postId)" >
     <br>
-
     <div class="row mb-2 justify-content-md-center">
       <div class="col-md-9 align-self-center ">
         <div class="row g-0 border rounded-3 overflow-hidden flex-md-row mb-4 shadow-lg h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column">
             <strong class="d-inline-block mb-2 text-primary">{{ posts.genre }}</strong>
+
             <h3 class="mb-0">{{ posts.postTitle }}</h3>
+            <!--        <div class="mb-1 text-muted">Nov 12</div>-->
             <p class="card-text mb-auto">{{ posts.postBody }}</p>
+            <!--        <a href="#" class="stretched-link">Continue reading</a>-->
+            <div class="py-3">
+              <h6 class="mb-0">post by: {{ posts.username }}</h6>
+            </div>
             <div class="btn-sm-group">
-              <button class="btn btn-danger" (click)="ngDeletePost(posts.postId)" >Delete Post</button>
-              <button (click)="viewPost(posts.postId)" class="btn btn-primary" type="button">View Post</button>
-              <button (click)="editPost(posts.postId)" class="btn btn-secondary" type="button">Edit Post</button>
+              <button class="btn btn-danger mx-1" (click)="ngDeletePost(posts.postId)"  *ngIf="posts.username === this.loggedinUsername">Delete Post</button>
+              <button (click)="viewPost(posts.postId)" class="btn btn-primary mx-1" type="button">View Post</button>
+              <button (click)="editPost(posts.postId)" class="btn btn-secondary mx-1" type="button" *ngIf="posts.username === this.loggedinUsername">Edit Post</button>
             </div>
           </div>
           <div class="col-auto d-none d-lg-block">

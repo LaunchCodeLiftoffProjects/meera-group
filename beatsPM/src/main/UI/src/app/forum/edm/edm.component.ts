@@ -14,7 +14,7 @@ export class EdmComponent implements OnInit {
 // Arrays to hold the posts from backend
   posts: Array<PostObject> = [];
   postsGenre: Array<PostObject> = [];
-
+  loggedinUsername!: String | null;
 
   constructor(private apiService: ApiService, private router: Router,  private dataShareService: DataShareService) {
   this.apiService.getAllPosts().subscribe(post => {
@@ -30,6 +30,7 @@ export class EdmComponent implements OnInit {
         })
 }
   ngOnInit(): void {
+    this.loggedinUsername = localStorage.getItem('username')
 
   }
 
