@@ -5,7 +5,7 @@ import { ApiService } from '../shared/api.service';
 import { DataShareService } from '../shared/datashare.service';
 import { Observable, throwError, } from 'rxjs';
 import { Router} from '@angular/router';
-import { CommentObj } from '../comment/commentObj'
+import { CommentObj } from '../comment/CommentObj'
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -20,6 +20,7 @@ export class ForumComponent implements OnInit {
   filteredComments:Array<CommentObj> = [];
   commentForm!: FormGroup;
   commentObj!: CommentObj;
+  loggedinUsername!: String | null;
 
 
 
@@ -31,6 +32,7 @@ export class ForumComponent implements OnInit {
     commentBody:'',
     postId: 0,
     commentId:0,
+    username:'',
     }
   }
 
@@ -41,6 +43,8 @@ export class ForumComponent implements OnInit {
         commentBody: new FormControl('',  Validators.required),
 
       });
+
+    this.loggedinUsername = localStorage.getItem('username')
   }
 
   reloadCurrentPage() {
@@ -48,7 +52,7 @@ export class ForumComponent implements OnInit {
      }
 
   ngDeletePost(postId: number) {
-      console.log(this.apiService.deletePost(postId));
+      this.apiService.deletePost(postId);
       this.reloadCurrentPage();
   }
 

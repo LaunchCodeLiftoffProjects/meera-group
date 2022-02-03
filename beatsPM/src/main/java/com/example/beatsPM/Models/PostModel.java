@@ -15,6 +15,8 @@ public class PostModel {
     private String postBody;
     @NotNull
     private String youtubeLink;
+    @NotNull
+    private String username;
 
     @GeneratedValue
     @Id
@@ -58,5 +60,13 @@ public class PostModel {
 
     public void setYoutubeLink(String youtubeLink) {
         this.youtubeLink = youtubeLink;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

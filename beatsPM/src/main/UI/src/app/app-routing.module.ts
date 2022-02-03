@@ -10,9 +10,29 @@ import { RapComponent } from './forum/rap/rap.component';
 import { MiscComponent } from './forum/misc/misc.component';
 import { ForumComponent } from './forum/forum.component';
 import { ResultsComponent } from './forum/results/results.component';
-import { ViewpostComponent } from './viewpost/viewpost.component'
+import { ViewpostComponent } from './viewpost/viewpost.component';
+import { AuthGuard } from './shared/auth/auth.guard';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+
 
 const routes: Routes = [
+   {
+         path: 'signin',
+         pathMatch: 'full',
+         component: SigninComponent
+       },
+  {
+        path: 'signup',
+        pathMatch: 'full',
+        component: SignupComponent
+      },
+  {
+        path: 'userprofile/:id',
+        component: UserProfileComponent,
+        canActivate: [AuthGuard]
+      },
   {
       path: '',
       pathMatch: 'full',
@@ -21,56 +41,64 @@ const routes: Routes = [
   {
       path: 'results',
       pathMatch: 'full',
-      component: ResultsComponent
+      component: ResultsComponent,
+      canActivate: [AuthGuard]
     },
   {
     path: 'createpost',
     pathMatch: 'full',
-    component: CreatepostComponent
+    component: CreatepostComponent,
+    canActivate: [AuthGuard]
   },
 
   {
     path: 'forum',
     pathMatch: 'full',
     component: ForumComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'editpost/:id',
     pathMatch: 'prefix',
-    component: EditpostComponent
+    component: EditpostComponent,
+    canActivate: [AuthGuard]
   },
   {
       path: 'forum/edm',
       pathMatch: 'prefix',
-      component: EdmComponent
+      component: EdmComponent,
+      canActivate: [AuthGuard]
     },
   {
       path: 'forum/rock',
       pathMatch: 'prefix',
-      component: RockComponent
+      component: RockComponent,
+      canActivate: [AuthGuard]
     },
   {
       path: 'forum/jazz',
       pathMatch: 'prefix',
-      component: JazzComponent
+      component: JazzComponent,
+      canActivate: [AuthGuard]
     },
   {
       path: 'forum/rap',
       pathMatch: 'prefix',
-      component: RapComponent
+      component: RapComponent,
+      canActivate: [AuthGuard]
     },
   {
       path: 'forum/misc',
       pathMatch: 'prefix',
-      component: MiscComponent
+      component: MiscComponent,
+      canActivate: [AuthGuard]
     },
    {
        path: 'viewpost/:id',
        pathMatch: 'prefix',
-       component: ViewpostComponent
-     },
-
-
+       component: ViewpostComponent,
+       canActivate: [AuthGuard]
+     }
 ];
 
 @NgModule({

@@ -13,6 +13,7 @@ import { Router} from '@angular/router';
 export class ResultsComponent implements OnInit {
 
   posts: Array<PostObject> = [];
+    loggedinUsername!: String | null;
 
 
   constructor(private apiService: ApiService, private router: Router, private dataShareService: DataShareService) {
@@ -21,6 +22,7 @@ export class ResultsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+      this.loggedinUsername = localStorage.getItem('username')
   }
 
   reloadCurrentPage() {

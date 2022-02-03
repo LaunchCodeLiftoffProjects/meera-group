@@ -6,6 +6,7 @@ export class DataShareService {
     private posts: Array<PostObject> = [];
 
     setPosts(post:Array<PostObject>){
+        this.posts = [];
         this.posts = post;
     }
     getPosts(): Array<PostObject>{

@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { PostObject } from '../createpost/PostObject';
 import { ApiService } from '../shared/api.service';
 import { Observable, throwError, } from 'rxjs';
-import { CommentObj } from '../comment/commentObj'
-import { FormBuilder, FormGroup, FormControl, Validators, } from '@angular/forms';
+import { CommentObj } from '../comment/CommentObj'
+import { FormBuilder, FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
@@ -27,6 +27,8 @@ export class ViewpostComponent implements OnInit {
   filteredComments:Array<CommentObj> = [];
   commentForm!: FormGroup;
   commentObj!: CommentObj;
+  loggedinUsername!: string | null
+
 
 
 
@@ -48,6 +50,7 @@ export class ViewpostComponent implements OnInit {
         commentBody:'',
         postId: 0,
         commentId:0,
+        username:'',
         }
 
 
@@ -61,7 +64,7 @@ export class ViewpostComponent implements OnInit {
         commentBody: new FormControl('',  Validators.required),
 
       });
-
+this.loggedinUsername = localStorage.getItem('username')
   }
 
     reloadCurrentPage() {
@@ -80,8 +83,8 @@ export class ViewpostComponent implements OnInit {
       }
 
 
-      getYoutubeURL(id: string){
-      return this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/"+id);
+      getYoutubeURL(videoId: string){
+      return this.sanitizer.bypassSecurityTrustResourceUrl(videoId);
       }
 
 
@@ -89,6 +92,7 @@ export class ViewpostComponent implements OnInit {
  //   console.log(postId);
    this.commentObj.postId = postId;
    this.commentObj.commentBody = this.commentForm.controls['commentBody'].value;
+   this.commentObj.username = localStorage.getItem('username');
 
    this.apiService.postComment(this.commentObj).subscribe((data)=>{
    this.reloadCurrentPage();
@@ -106,6 +110,14 @@ export class ViewpostComponent implements OnInit {
      this.filteredComments.push(this.comments[i]);
    }
    }
+   }
+
+   deleteComment(commentId: number){
+      this.apiService.deleteComment(commentId);
+      setTimeout(() => {
+                  window.location.reload();
+                  }, 500);
+
    }
 
  initializeForm(): void {

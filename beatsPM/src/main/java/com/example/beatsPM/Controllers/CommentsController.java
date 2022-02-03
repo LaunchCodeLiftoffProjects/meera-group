@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.xml.stream.events.Comment;
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @Controller
 public class CommentsController {
 
@@ -33,6 +33,15 @@ public class CommentsController {
         commentsRepository.save(commentModel);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
+
+    @CrossOrigin(origins = "*")
+    @DeleteMapping("/comment_delete/{id}")
+    public ResponseEntity<Long> deleteComment(@PathVariable Long id) {
+            commentsRepository.deleteById(id);
+            System.out.println("deleted?");
+            return new ResponseEntity<Long>(HttpStatus.OK);
+    };
 
 
 }

@@ -4,6 +4,7 @@ import { PostObject } from '../createpost/PostObject';
 import { ApiService } from '../shared/api.service';
 import { DataShareService } from '../shared/datashare.service';
 import { Router} from '@angular/router';
+import { AuthService } from '../shared/auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -21,6 +22,7 @@ posts: Array<PostObject> = [];
   constructor(private apiService: ApiService,
     private fb: FormBuilder,
     private router: Router,
+    public authService: AuthService,
     private dataShareService: DataShareService,
   ) {}
 

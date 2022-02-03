@@ -1,29 +1,60 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">BeatsPM</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+  <!--    <div class="container-fluid">-->
+  <a class="navbar-brand mx-3" href="#">BeatsPM</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
+  <div class="collapse navbar-collapse px-3" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="createpost">Create a Post</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="userprofile">User Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="forum">Music Forum</a>
+      </li>
+    </ul>
+
+
+
+
+    <!--      </div>-->
+
+
+  </div>
+
+  <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+
+
+    <div class = "mx-3">
+      <a class="btn btn-outline-secondary mx-1" routerLinkActive="active" *ngIf="this.authService.isLoggedIn === false"
+         routerLinkActive="active" routerLink="/signup">Sign up</a>
+      <a class="btn btn-outline-primary mx-1" routerLinkActive="active" routerLink="/signin" *ngIf="this.authService.isLoggedIn === false" >Sign
+        in</a>
+      <button (click)="this.authService.logout()" *ngIf="this.authService.isLoggedIn" type="button" class="btn btn-danger mx-1">Logout</button>
+    </div>
+
+
+    <div class="mx-3">
+      <form class="form-inline my-2 my-lg-0" [formGroup]="createSearch" (ngSubmit)="onSubmit()">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="createpost">Create a Post</a>
+            <input class="form-control mr-sm-2" type="text" placeholder="search posts" formControlName="searchText">
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">User Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="forum">Music Forum</a>
-          </li>
-          <li>
-          <form [formGroup]="createSearch" (ngSubmit)="onSubmit()">
-            <label>
-              <input type="text" placeholder="search posts" formControlName="searchText">
-              <button class="button" type="submit">Submit</button>
-            </label>
-          </form>
+            <button class="btn btn-outline-success mx-2 my-sm-0" type="submit">Submit</button>
           </li>
         </ul>
-      </div>
+      </form>
     </div>
-  </nav>
+
+  </div>
+
+
+
+</nav>

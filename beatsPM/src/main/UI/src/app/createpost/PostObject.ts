@@ -4,4 +4,5 @@ export class PostObject {
   postBody!: string;
   youtubeLink!:string;
   postId!: number;
+  username!: string | null;
   }

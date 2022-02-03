@@ -3,9 +3,9 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError, } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { ApiService } from '../shared/api.service'
 import { Router } from '@angular/router';
 import { PostObject } from './PostObject';
+import { ApiService } from '../shared/api.service';
 
 
 @Component({
@@ -19,6 +19,7 @@ export class CreatepostComponent implements OnInit {
 
   postObject: PostObject;
   createPostForm!: FormGroup;
+  username!:string | null
 
 
   constructor(
@@ -33,6 +34,7 @@ export class CreatepostComponent implements OnInit {
       genre: '',
       youtubeLink: '',
       postId: 0,
+      username:'',
     }
     };
 
@@ -45,6 +47,8 @@ export class CreatepostComponent implements OnInit {
       youtubeLink: new FormControl('', Validators.required),
       genre: new FormControl('',  Validators.required),
     });
+     console.log(localStorage.getItem('username'));
+     this.username=localStorage.getItem('username')
   };
   //function to create the post using form values in localhost:4200/createpost
   createPost() {
@@ -52,10 +56,12 @@ export class CreatepostComponent implements OnInit {
     this.postObject.postBody = this.createPostForm.controls['postBody'].value;
     this.postObject.youtubeLink = this.extractYoutubeId(this.createPostForm.controls['youtubeLink'].value);
     this.postObject.genre = this.createPostForm.controls['genre'].value;
+    this.postObject.username  =  localStorage.getItem('username');
 
-    this.api.createPost(this.postObject).subscribe((data) => {
+
+    this.api.createPost(this.postObject).subscribe((data: any) => {
       this.router.navigateByUrl('/forum');
-    }, error => {
+    }, (error: any) => {
       throwError(error);
     })
   }
@@ -75,7 +81,7 @@ export class CreatepostComponent implements OnInit {
     let match = url.match(regExp);
 
     if(((match&&match[7].length==11)? match[7] : false)){
-    Id = match![7];
+    Id ="https://www.youtube.com/embed/"+ match![7];
     } else{
     Id = "No Link"
     }
